@@ -13,12 +13,12 @@ function Layout({ children }) {
         {/* Banner */}
         <Banner />
   
-        {/* Contenu principal 
-        <main>{children}</main> */}
+        {/* Contenu principal */}
+        <main>{children}</main> 
   
        
         </div>
-        
+
          {/* Footer */}
          <Footer />
       </div>
