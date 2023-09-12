@@ -1,0 +1,129 @@
+@import './utils/_variables.scss';
+@import './utils/_mixins.scss';
+@import './utils/_typographie.scss';
+
+/* Dans votre fichier CSS */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+
+.header {
+    @include container;
+    &__contact{
+        margin: 10px 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        &-details {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            a {
+                justify-content: flex-end;
+                align-items: center;
+                text-decoration: none;
+                display: flex;
+                color: #002A3B;
+                gap: 10px;
+            }
+        }
+        &-media {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            a {
+                color: $darkgreen;
+            }
+        }
+    }
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 50x;
+    .logo {
+        margin-left: 30px;
+    }
+    .menu {
+        justify-content: flex-end; /* Centre les éléments horizontalement */
+        width: 60%;
+        &__item{
+            border-right: 2px solid $green;
+        }
+    }
+}
+
+.banner {
+    &-image{
+        width: 100%;
+    }
+    &-content{
+        position: absolute;
+        left: 50px;
+        top: 200px;
+
+    }
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    background-color: $darkgreen;
+    color: $blue;
+    border-radius: 50px;
+}
+
+.menu{
+    display: flex;
+    
+    align-items: center; /* Centre les éléments verticalement */
+    height: 50px;
+    padding: 0;
+    margin: 0;
+    background-color: $darkgreen;
+    &__item{
+        list-style: none;
+        display: flex;
+        padding: 0 10px;
+        align-items: center;
+        justify-content: center;
+        
+        width: auto;
+        &-link{
+            text-decoration: none;
+            color: $green;
+            background-color: $darkgreen;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: $darkgreen;
+    color: white;
+    &__media{
+        display: flex;
+        justify-content: space-between;
+        width: 20%;
+        a{
+        color: $green;   
+        } 
+    }
+    .menu{
+        justify-content: space-between;
+        
+    }
+}
