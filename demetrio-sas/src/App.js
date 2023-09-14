@@ -19,16 +19,16 @@ function App() {
           <Route path="/" element={<Accueil />} />
 
           {/* Route de la page Notre Savoir-faire */}
-          <Route path="/Notre savoir-faire" element={<NotreSavoirFaire className="notre-savoir-faire" />} />
+          <Route path="/notre-savoir-faire" element={<NotreSavoirFaire className="notre-savoir-faire-page" />} />
 
           {/* Route de la page Nos Prestations */}
-          <Route path="/Nos Prestations" element={<NosPrestations className="nos-prestations" />} />
+          <Route path="/nos-Prestations" element={<NosPrestations className="nos-prestations-page" />} />
 
           {/* Route de la page Devis en ligne */}
-          <Route path="/Devis en ligne" element={<DevisEnLigne className="devis-en-ligne" />} />
+          <Route path="/Devis-en-ligne" element={<DevisEnLigne className="devis-en-ligne-page" />} />
 
           {/* Route de la page Contact */}
-          <Route path="/Contact" element={<Contact className="contact" />} />
+          <Route path="/contact" element={<Contact className="contact-page" />} />
 
           {/* Route par défaut pour la page d'erreur 
           <Route path="*" element={<Error />} />*/}
