@@ -180,10 +180,10 @@ button {
 }
 
 /*Slide*/
+/* 
+- A revoir
 
-/* styles.scss */
-
-/* Style du composant Slide */
+*/
 .slide {
     display: flex;
     align-items: center;
@@ -225,6 +225,20 @@ button {
       /* Ajoutez ici le style du texte sous les onglets */
     }
   }
-  
+
+.container__label{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    .label{
+        width: 200px;
+        padding: 20px;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}
   
   

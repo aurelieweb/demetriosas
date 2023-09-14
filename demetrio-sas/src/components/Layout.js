@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './Header';
-import Banner from './Banner';
+
 import Footer from './Footer';
 
 function Layout({ children }) {
@@ -11,7 +11,6 @@ function Layout({ children }) {
         <Header />
 
         {/* Banner */}
-        <Banner />
   
         {/* Contenu principal */}
         <main>{children}</main> 
