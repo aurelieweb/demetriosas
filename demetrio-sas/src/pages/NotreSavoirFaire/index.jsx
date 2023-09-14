@@ -1,8 +1,9 @@
 import React from 'react';
 import Banner from '../../components/Banner';
+import Card from '../../components/Card';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { faCheck, faFaucet, faThermometer, faHome } from '@fortawesome/free-solid-svg-icons';
 
 import serviceImg from '../../assets/test.jpeg';
 
@@ -11,18 +12,27 @@ function NotreSavoirFaire () {
 
     const pageTitle = "Notre savoir-faire : Plomberie, Chauffage et Pompe à chaleur";
 
+    const plomberie = "plomberie";
+    const chauffage = "chauffage";
+    const pac = "pac";
+
     return (
         <div className='main'>
             <Banner pageTitle={pageTitle}/>
             <section >
                 <h2>Découvrez Nos Services Expert en Plomberie, Chauffage et Pompes à Chaleur</h2>
                 <p>Notre  expertise s'étend sur trois domaines essentiels : la plomberie, le chauffage et les pompes à chaleur. Nous sommes fiers de mettre notre savoir-faire à votre service pour répondre à vos besoins en matière de confort et de performance, que ce soit dans le cadre de la construction neuve ou de la rénovation. Notre équipe expérimentée est là pour vous accompagner tout au long de vos projets, en vous offrant des solutions sur mesure.</p>
+                <div className='container__card'>
+                    <Card serviceName="Plomberie" serviceSection={plomberie} icon={<FontAwesomeIcon icon={faFaucet} />} />
+                    <Card serviceName="Chauffage" serviceSection={chauffage} icon={<FontAwesomeIcon icon={faThermometer}/>} />
+                    <Card serviceName="Pompe à chaleur" serviceSection={pac} icon={<FontAwesomeIcon icon={faHome} />} />
+                </div>
+            
             </section>
             <section className='plomberie'>
                 <img className="service-img" src={serviceImg} alt="Service plomberie Thonon" />
                 <h2>Services de Plomberie: Installation et Dépannage à Thonon les Bains</h2>
                 <p>Notre expertise en plomberie est la garantie d'une solution efficace à tous vos besoins. Nous sommes prêts à résoudre tous vos problèmes de plomberie, de la fuite au projet de création ou rénovation de salle de bains.</p>
-                <ul>
                 <ul>
                     <li><FontAwesomeIcon icon={faCheck} /> Dépannage plomberie</li>
                     <li><FontAwesomeIcon icon={faCheck} /> Réparation de fuite</li>
@@ -34,8 +44,6 @@ function NotreSavoirFaire () {
                     <li><FontAwesomeIcon icon={faCheck} /> Installation de tuyauterie</li>
                     <li><FontAwesomeIcon icon={faCheck} /> Installation réseau plomberie neuf et rénovation</li>
                     <li><FontAwesomeIcon icon={faCheck} /> Remplacement wc</li>
-</ul>
-
                 </ul>
             </section>
             <section className='chauffage'>

@@ -13,11 +13,11 @@ import LogoHansgrohe from '../../assets/logo-hansgrohe.png';
 
 function Accueil() {
 
+    const pageTitle = "Expert plomberie, Chauffage et Pompe à chaleur à Thonon les Bains";
+
     const plomberie = "plomberie";
     const chauffage = "chauffage";
     const pac = "pac";
-
-    const pageTitle = "Expert plomberie, Chauffage et Pompe à chaleur à Thonon les Bains";
     
     return (
         <div className='main'>
