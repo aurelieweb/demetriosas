@@ -143,6 +143,7 @@ button {
     padding: 20px;
     background-color: $darkgreen;
     color: white;
+    margin-top: 50px;
     &__media{
         display: flex;
         justify-content: space-between;
@@ -233,6 +234,7 @@ button {
     }
   }
 
+  /*Label MArque*/
 .container__label{
     display: flex;
     justify-content: space-around;
@@ -248,4 +250,103 @@ button {
     }
 }
   
+/*Gallery*/
+
+/*
+- améliorer
+*/
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    background-color: $darkgreen;
+    flex-wrap: wrap;
+}
+
+.gallery__card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    background-color: white;
+}
+
+.gallery__card-img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.gallery__card-content {
+  text-align: center;
+}
+
+/*DevisForm*/
+
+/*
+-Améliorer
+*/
+/* Style pour le formulaire */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style pour les étiquettes */
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  /* Style pour les champs de saisie */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Style pour le bouton "Valider" */
+  button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  /* Style pour le bouton "Choisir fichier(s)" */
+  .custom-file-upload {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  /* Style pour les messages d'erreur */
+  .error-message {
+    color: #ff0000;
+    font-size: 14px;
+    margin-top: 5px;
+  }
   

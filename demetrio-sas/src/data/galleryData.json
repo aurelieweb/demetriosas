@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "img": "chemin/vers/image1.jpg",
+        "description": "Description de l'image 1",
+        "lieu": "Lieu de la photo 1"
+    },
+    {
+        "id": 2,
+        "img": "chemin/vers/image2.jpg",
+        "description": "Description de l'image 2",
+        "lieu": "Lieu de la photo 2"
+    },
+    {
+        "id": 3,
+        "img": "chemin/vers/image3.jpg",
+        "description": "Description de l'image 3",
+        "lieu": "Lieu de la photo 3"
+    },
+    {
+        
+        
+      },
+      {
+        "id": 5,
+        "img": "chemin/vers/image2.jpg",
+        "description": "Description de l'image 2",
+        "lieu": "Lieu de la photo 2"
+      },
+      {
+        "id": 6,
+        "img": "chemin/vers/image3.jpg",
+        "description": "Description de l'image 3",
+        "lieu": "Lieu de la photo 3"
+      }
+  ]
+  
