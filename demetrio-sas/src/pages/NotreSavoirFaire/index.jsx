@@ -5,7 +5,9 @@ import Card from '../../components/Card';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faFaucet, faThermometer, faHome } from '@fortawesome/free-solid-svg-icons';
 
-import serviceImg from '../../assets/test.jpeg';
+import Imgplomberie from '../../assets/imgPlomberie.jpg';
+import Imgchauffage from '../../assets/imgChauffage.jpg';
+import Imgpac from '../../assets/imgPac.jpg';
 
 
 function NotreSavoirFaire () {
@@ -30,7 +32,7 @@ function NotreSavoirFaire () {
             
             </section>
             <section className='plomberie'>
-                <img className="service-img" src={serviceImg} alt="Service plomberie Thonon" />
+                <img className="service-img" src={Imgplomberie} alt="Service plomberie Thonon" />
                 <h2>Services de Plomberie: Installation et Dépannage à Thonon les Bains</h2>
                 <p>Notre expertise en plomberie est la garantie d'une solution efficace à tous vos besoins. Nous sommes prêts à résoudre tous vos problèmes de plomberie, de la fuite au projet de création ou rénovation de salle de bains.</p>
                 <ul>
@@ -47,7 +49,7 @@ function NotreSavoirFaire () {
                 </ul>
             </section>
             <section className='chauffage'>
-                <img className="service-img" src={serviceImg} alt="Service plomberie Thonon" />
+                <img className="service-img" src={Imgchauffage} alt="Service plomberie Thonon" />
                 <h2>Chauffage à Thonon les bains: Votre partenaire de confiance</h2>
                 <p>Découvrez notre gamme complète de services de chauffage dédiés à votre confort. De l'installation à l'entretien, nous sommes votre partenaire de confiance pour créer un environnement chaleureux et confortable au sein de votre foyer.</p>
                 <ul>
@@ -63,7 +65,7 @@ function NotreSavoirFaire () {
 
             </section>
             <section className='pac'>
-                <img className="service-img" src={serviceImg} alt="Service plomberie Thonon" />
+                <img className="service-img" src={Imgpac} alt="Service plomberie Thonon" />
                 <h2>Installation de pompe à chaleur à Thonon les Bains et dans le chablais</h2>
                 <p>Les pompes à chaleur sont l'avenir du chauffage écoénergétique. Chez DEMETRIO, nous sommes fiers de proposer des solutions de chauffage respectueuses de l'environnement pour un avenir plus durable.</p>
                 <ul>

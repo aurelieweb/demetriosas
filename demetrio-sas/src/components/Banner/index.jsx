@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../styles/styles.scss';
-import bannerImg from '../../assets/homeBanner.jpg';
+import bannerImg from '../../assets/imgBanner.jpg';
 import Button from '../Button';
 
 function Banner({ pageTitle }) {

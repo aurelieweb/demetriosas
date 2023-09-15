@@ -1,9 +1,9 @@
 import React from 'react';
 import Banner from '../../components/Banner';
 import DevisForm from'../../components/DevisForm';
-import ImgDevis from '../../assets/test.jpeg'
+import ImgDevis from '../../assets/imgDevis.jpg'
 
-function Accueil() {
+function Devis() {
 
     const pageTitle = "Devis en Ligne Plomberie, Chauffage et Pompe à Chaleur à Thonon-les-Bains";
 
@@ -30,4 +30,4 @@ function Accueil() {
             </div>
     );
 }
-export default Accueil;          
+export default Devis;          

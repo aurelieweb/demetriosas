@@ -18,8 +18,10 @@
         "lieu": "Lieu de la photo 3"
     },
     {
-        
-        
+      "id": 4,
+      "img": "chemin/vers/image2.jpg",
+      "description": "Description de l'image 2",
+      "lieu": "Lieu de la photo 2"   
       },
       {
         "id": 5,

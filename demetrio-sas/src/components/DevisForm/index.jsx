@@ -69,100 +69,106 @@ function DevisForm() {
     <div>
       <h1>Devis en Ligne</h1>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="nom">Nom :</label>
-          <input
-            type="text"
-            id="nom"
-            value={nom}
-            onChange={(e) => setNom(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="prenom">Prénom :</label>
-          <input
-            type="text"
-            id="prenom"
-            value={prenom}
-            onChange={(e) => setPrenom(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="email">E-mail :</label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="telephone">Numéro de téléphone :</label>
-          <input
-            type="tel"
-            id="telephone"
-            value={telephone}
-            onChange={(e) => setTelephone(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="typeIntervention">Type d'intervention :</label>
-          <select
-            id="typeIntervention"
-            value={typeIntervention}
-            onChange={(e) => setTypeIntervention(e.target.value)}
-            required
-          >
-            <option value="">Sélectionnez le type d'intervention</option>
-            <option value="Dépannage plomberie">Dépannage plomberie</option>
-            <option value="Dépannage chauffage">Dépannage chauffage</option>
-            <option value="Installation pompe à chaleur">Installation pompe à chaleur</option>
-            <option value="Installation sanitaire">Installation sanitaire</option>
-            <option value="Intallation chauffage">Installation chauffage</option>
-            <option value="Projet de construction neuve">Projet de construction neuve</option>
-            <option value="Projet de rénovation">Projet de rénovation</option>
-            <option value="Autre">Autre</option>
-          </select>
-        </div>
-        <div>
-          <label htmlFor="message">Message :</label>
-          <textarea
-            id="message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <button
-            type="button"
-            className="custom-file-upload"
-            onClick={handleCustomFileUpload}
-          >
-            Choisir fichier(s)
-          </button>
-          <input
-            type="file"
-            id="fichiers"
-            onChange={handleFileChange}
-            multiple
-            style={{ display: 'none' }} // Masquer l'élément input[type="file"]
-          />
-        </div>
-        <div>
-          {fichierNoms.length > 0 ? (
-            <div>Fichiers joints : {fichierNoms.join(', ')}</div>
-          ) : (
-            <div>Aucun fichier joint</div>
-          )}
-        </div>
-        <div>
-          <button type="submit">Valider</button>
-        </div>
+      <div>
+  <label htmlFor="nom">Nom :</label>
+  <input
+    type="text"
+    id="nom"
+    value={nom}
+    onChange={(e) => setNom(e.target.value)}
+    required
+    autoComplete="family-name" // Autocomplétion pour le nom de famille
+  />
+</div>
+<div>
+  <label htmlFor="prenom">Prénom :</label>
+  <input
+    type="text"
+    id="prenom"
+    value={prenom}
+    onChange={(e) => setPrenom(e.target.value)}
+    required
+    autoComplete="given-name" // Autocomplétion pour le prénom
+  />
+</div>
+<div>
+  <label htmlFor="email">E-mail :</label>
+  <input
+    type="email"
+    id="email"
+    value={email}
+    onChange={(e) => setEmail(e.target.value)}
+    required
+    autoComplete="email" // Autocomplétion pour l'adresse e-mail
+  />
+</div>
+<div>
+  <label htmlFor="telephone">Numéro de téléphone :</label>
+  <input
+    type="tel"
+    id="telephone"
+    value={telephone}
+    onChange={(e) => setTelephone(e.target.value)}
+    required
+    autoComplete="tel" // Autocomplétion pour le numéro de téléphone
+  />
+</div>
+<div>
+  <label htmlFor="typeIntervention">Type d'intervention :</label>
+  <select
+    id="typeIntervention"
+    value={typeIntervention}
+    onChange={(e) => setTypeIntervention(e.target.value)}
+    required
+  >
+    <option value="">Sélectionnez le type d'intervention</option>
+    <option value="Dépannage plomberie">Dépannage plomberie</option>
+    <option value="Dépannage chauffage">Dépannage chauffage</option>
+    <option value="Installation pompe à chaleur">Installation pompe à chaleur</option>
+    <option value="Installation sanitaire">Installation sanitaire</option>
+    <option value="Intallation chauffage">Installation chauffage</option>
+    <option value="Projet de construction neuve">Projet de construction neuve</option>
+    <option value="Projet de rénovation">Projet de rénovation</option>
+    <option value="Autre">Autre</option>
+  </select>
+</div>
+<div>
+  <label htmlFor="message">Message :</label>
+  <textarea
+    id="message"
+    value={message}
+    onChange={(e) => setMessage(e.target.value)}
+    required
+    autoComplete="message" // Autocomplétion pour le message
+  />
+</div>
+<div>
+  <button
+    type="button"
+    className="custom-file-upload"
+    onClick={handleCustomFileUpload}
+  >
+    Choisir fichier(s)
+  </button>
+  <input
+    type="file"
+    id="fichiers"
+    onChange={handleFileChange}
+    multiple
+    style={{ display: 'none' }}
+  />
+</div>
+<div>
+  {fichierNoms.length > 0 ? (
+    <div>Fichiers joints : {fichierNoms.join(', ')}</div>
+  ) : (
+    <div>Aucun fichier joint</div>
+  )}
+</div>
+<div>
+  <button type="submit">Valider</button>
+</div>
+
       </form>
     </div>
   );

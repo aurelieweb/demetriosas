@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../../styles/styles.scss';
-import ImgSlide from '../../assets/test.jpeg';
+import ImgSlide from '../../assets/imgTeam.jpeg';
 
 function Slide() {
   const [selectedTab, setSelectedTab] = useState('histoire');

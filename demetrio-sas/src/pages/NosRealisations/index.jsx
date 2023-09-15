@@ -2,7 +2,7 @@ import React from 'react';
 import Banner from '../../components/Banner';
 import Gallery from '../../components/Gallery';
 
-function NosPrestations() {
+function NosRealisations() {
 
     const pageTitle = "Expert plomberie, Chauffage et Pompe à chaleur à Thonon les Bains";
 
@@ -17,4 +17,4 @@ function NosPrestations() {
     );
 }
 
-export default NosPrestations;
+export default NosRealisations;

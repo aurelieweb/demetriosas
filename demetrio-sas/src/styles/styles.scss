@@ -282,42 +282,59 @@ button {
   text-align: center;
 }
 
-/*DevisForm*/
+/*Form*/
 
 /*
 -Améliorer
 */
 /* Style pour le formulaire */
 form {
-    max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
+    background-color: #002A3B;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: white;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    .form-group{
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+        label {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            font-weight: bold;
+            margin-bottom: 8px;
+          }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+        
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    }
+    .form-style{
+        width: 100%;
+    }
   }
   
   /* Style pour les étiquettes */
-  label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 8px;
-  }
+
   
   /* Style pour les champs de saisie */
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  select,
-  textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-  }
+
   
   /* Style pour le bouton "Valider" */
   button[type="submit"] {
