@@ -15,14 +15,26 @@ section {
     margin-top: 50px;
 }
 
+h1 {
+    font-size: 36px;
+    width: 60%;
+    margin: 20px 0;
+}
+
 h2 {
     color: $darkgreen;
     display: flex;
     justify-content: center;
+    font-size: 36px;
+    text-align: center;
 }  
    
 h3 {
     margin: 0;
+}
+
+.section-text {
+    margin-bottom: 50px;
 }
 
 p {
@@ -32,17 +44,32 @@ p {
 
 
 
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container__body{
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+}
+
 .header {
     @include container;
+    margin-bottom: 0;
+
     &__contact{
         margin: 10px 50px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+
         &-details {
             display: flex;
             justify-content: space-between;
             gap: 20px;
+
             a {
                 justify-content: flex-end;
                 align-items: center;
@@ -52,6 +79,7 @@ p {
                 gap: 10px;
             }
         }
+
         &-media {
             display: flex;
             justify-content: space-between;
@@ -69,45 +97,60 @@ p {
     flex-direction: row;
     justify-content: space-between;
     height: 50x;
+
     .logo {
         margin-left: 30px;
     }
+
     .menu {
-        justify-content: flex-end; /* Centre les éléments horizontalement */
-        width: 60%;
+        justify-content: flex-end;
+        width: 70%;
+        height: auto;
+
         &__item{
             border-right: 2px solid $green;
+
+            &:last-child {
+                border-right: none; /* Supprime la bordure droite du dernier élément */
+              }
         }
     }
 }
 
 .banner {
-    height: 300px;
+    height: 500px;
+
     &-image{
         width: 100%;
         height: 100%;
+
     }
+
     &-content{
-        position: absolute;
+        position: relative;
         left: 50px;
-        top: 100px;
+        bottom: 350px;
         p{
             text-align: left;
-            font-size: 48px;
-            color: $darkgreen;
+            font-size: 96px;
+            color: #002A3B;
+            opacity: 1;
+            font-weight: bold;
+            margin: 0;
         }
 
     }
 }
 
 button {
-    width: 100px;
+    width: 150px;
     height: 40px;
+    font-weight: bold;
     background-color: $darkgreen;
     color: $blue;
     border-radius: 50px;
+    margin-top: 50px;
 }
-
 .menu{
     display: flex;
     
@@ -116,6 +159,7 @@ button {
     padding: 0;
     margin: 0;
     background-color: $darkgreen;
+
     &__item{
         list-style: none;
         display: flex;
@@ -124,6 +168,7 @@ button {
         justify-content: center;
         
         width: auto;
+
         &-link{
             text-decoration: none;
             color: $green;
@@ -141,13 +186,16 @@ button {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background-color: $darkgreen;
+    background-color: #002A3B;
     color: white;
     margin-top: 50px;
+    width: 100%;
+
     &__media{
         display: flex;
         justify-content: space-between;
         width: 20%;
+
         a{
         color: $green;   
         } 
@@ -157,7 +205,7 @@ button {
         
     }
 }
-
+/*------------------------Home------------------------------------
 /*Card__service*/
 .container__card{
     display:flex;
@@ -171,19 +219,28 @@ button {
   }
   
 .card {
-    width: auto;
-    background-color: $darkgreen;
-    color: $green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #002A3B;
+    color: #a7d403;
     border-radius: 10px;
+
     &__image {
         width: 100%;
-        max-height: 300px;
+        height: 300px;
         border-radius: 10px 10px 0 0;
         object-fit: cover;
     }
+
     &__content {
         text-align: center;
         padding: 10px;
+
+        p {
+            color: white;
+            opacity: 1;
+        }
     }
 }
 
@@ -197,42 +254,49 @@ button {
     align-items: center;
     justify-content: space-between;
     background-color: $darkgreen;
-    color: white; /* Couleur d'arrière-plan de la diapositive */
-  
-    /* Style de l'image à gauche */
-    .slide__image {
-      max-width: 50%; /* Ajustez la largeur de l'image selon vos besoins */
-      height: 100%; /* Pour maintenir le rapport hauteur/largeur */
-      margin-right: 20px; /* Espacement entre l'image et le contenu texte */
+    color: white;
+    
+    &__image {
+      max-width: 40%;
+      height: 100%;
     }
-  
-    /* Style du contenu texte à droite */
-    .slide__content {
-      flex-grow: 1; /* Pour occuper tout l'espace disponible */
-      /* Vous pouvez ajouter ici d'autres styles pour le contenu texte */
-    }
-  
-    /* Style des onglets dans le contenu texte */
-    .slide__content-tab {
-      ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-  
-        li {
-          margin-right: 10px; /* Espacement entre les onglets */
-          cursor: pointer; /* Curseur de type main lorsque survolé */
-          /* Ajoutez d'autres styles de mise en forme des onglets ici */
+    
+    &__content {
+      flex-grow: 1;
+      
+      &-tab {
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          border-bottom: 1px solid white;
+          height: 50px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          
+          li {
+            padding: 10px;
+            cursor: pointer;
+            
+            &:hover {
+                opacity: 0.45;
+            }
+            &.active { 
+                color : white;
+                border-bottom: 5px solid $green; 
+            }
+          }
         }
       }
+      
+      &-text {
+        margin: 20px 40px;
+      }
     }
+}
   
-    /* Style du texte en dessous des onglets */
-    .slide__content-text {
-      /* Ajoutez ici le style du texte sous les onglets */
-    }
-  }
 
   /*Label MArque*/
 .container__label{
@@ -240,16 +304,105 @@ button {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+
     .label{
         width: 200px;
         padding: 20px;
+
         img{
             width: 100%;
             height: auto;
         }
     }
 }
-  
+/*-------------------Fin Home-----------------------------
+
+/*-------------------Savoir faire-------------------------
+/*Card Icon*/
+
+.savoirFaire-card{
+    .card-link{
+        width: 30%;
+        .card-span {
+            border-radius: 50%;
+            background-color: #a7d403;
+            color: #002A3B;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+            top: -35px;
+            left: auto;
+            font-size: 30px;
+        }
+}
+}
+
+
+/*Section notre savoir-faire*/
+#chauffage {
+    flex-direction: row-reverse;
+}
+
+.savoirFaire-section {
+    display: flex;
+    flex-direction: row;
+    margin: 50px;
+    .service-img{
+        width: 50%;
+    }
+
+    .savoirFaire-div {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        padding: 0 20px;
+        h2 {
+            text-align: left;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        p {
+            text-align: left;
+        }
+
+        ul {
+            list-style: none;
+            
+            li {
+
+                .check {
+                color: $green;
+                }
+            }
+        }
+    }
+}
+
+.rge-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #a7d403;
+    width: 520px;
+    height: 150px;
+    position: relative;
+    top: -1000px;
+    left: 60px;
+    padding: 20px;
+    .rge-img {
+        width: 100px;
+    }
+    p {
+        color: $darkgreen;
+        opacity: 1;
+    }
+  }
+
+/*-----------------------Nos réalisations--------------- 
 /*Gallery*/
 
 /*
@@ -281,12 +434,100 @@ button {
 .gallery__card-content {
   text-align: center;
 }
+/*----------------------------Fin Nos réalisations----------
 
+  /*----------------------Devis en ligne-------------------
+
+  /*
+  -
+  */
+  .container__devis {
+    .devis__content {
+      display: flex;
+      flex-direction: row;
+      &-text {
+          p {
+              text-align: left;
+              opacity: 1;
+          }
+      }
+      &-img {
+          max-width: 50%;
+      }
+    }
+    #devis__form {
+      &-title  {
+          text-align: center;
+          margin: 50px 0;
+      }
+    }
+  }
+
+  
+  /*
+  -
+  */
+.container__devis {
+    .devis__content {
+      display: flex;
+      flex-direction: row;
+      &-text {
+          p {
+              text-align: left;
+              opacity: 1;
+          }
+      }
+      &-img {
+          max-width: 50%;
+      }
+    }
+    #devis__form {
+      &-title  {
+          text-align: center;
+          margin: 50px 0;
+      }
+    }
+  }
+  
+/*---------------------------Fin devis en ligne------------
+
+/*----------------------------Contact--------------------
 /*Form*/
 
 /*
 -Améliorer
 */
+#contact__section {
+    display: flex;
+    justify-content: center;
+}
+.contact__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    width: 80%;
+}
+.contact__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #002A3B;
+    color: #a7d403;
+    width: 30%;
+    padding: 10px;
+    border-radius: 5px;
+    min-width: 180px;
+    font-size: 30px;
+    &-title {
+        display: none;
+    }
+    p {
+        color: white;
+        opacity: 1;
+        font-size: 16px;
+    }
+}
 /* Style pour le formulaire */
 form {
     margin: 0 auto;
@@ -294,17 +535,19 @@ form {
     background-color: #002A3B;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: white;
-    width: 80%;
+    color: $green;
+    width: calc(80% - (40px));
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+
     .form-group{
         display: flex;
         flex-direction: column;
-        width: 45%;
+        width: calc(50% - (10px));
+
         label {
             display: flex;
             flex-direction: row;
@@ -312,6 +555,7 @@ form {
             font-weight: bold;
             margin-bottom: 8px;
           }
+
         input[type="text"],
         input[type="email"],
         input[type="tel"],
@@ -325,6 +569,7 @@ form {
             font-size: 16px;
         }
     }
+
     .form-style{
         width: 100%;
     }
@@ -338,8 +583,8 @@ form {
   
   /* Style pour le bouton "Valider" */
   button[type="submit"] {
-    background-color: #007bff;
-    color: #fff;
+    background-color: $green;
+    color: $darkgreen;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -366,4 +611,4 @@ form {
     font-size: 14px;
     margin-top: 5px;
   }
-  
+

@@ -67,7 +67,7 @@ function DevisForm() {
 
   return (
     <div>
-      <h1>Devis en Ligne</h1>
+      <h3 id='devis__form-title'>Devis en Ligne</h3>
       <form onSubmit={handleSubmit}>
       <div>
   <label htmlFor="nom">Nom :</label>

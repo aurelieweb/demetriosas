@@ -21,28 +21,28 @@ function Contact() {
             loading="lazy"
           ></iframe>
         </div>
-            <section>
-            <div className="contact-info">
-        <div className="contact-card">
-          <h3>Adresse</h3>
-          <FontAwesomeIcon icon={faLocationPin} />
-          <p>123 Rue de l'Exemple, Ville, Pays</p>
+            <section id='contact__section'>
+              <div className="contact__container">
+                <div className="contact__card">
+                  <h3 className='contact__card-title'>Adresse</h3>
+                  <FontAwesomeIcon icon={faLocationPin} />
+                  <p>17, chemin des Troncs <br/> 74200 Allinges</p>
+                </div>
+                <div className="contact__card">
+                  <h3 className='contact__card-title'>Téléphone</h3>
+                  <FontAwesomeIcon icon={faPhone} />
+                  <p>+33457437544</p>
+                </div>
+                <div className="contact__card">
+                  <h3 className='contact__card-title'>E-mail</h3>
+                  <FontAwesomeIcon icon={faEnvelope} />
+                  <p>contact@demetrio.fr</p>
+                </div>
         </div>
-        <div className="contact-card">
-          <h3>Téléphone</h3>
-          <FontAwesomeIcon icon={faPhone} />
-          <p>+1 234 567 890</p>
-        </div>
-        <div className="contact-card">
-          <h3>E-mail</h3>
-          <FontAwesomeIcon icon={faEnvelope} />
-          <p>contact@example.com</p>
-        </div>
-      </div>
             </section>
             <section>
             <div className="contact-form">
-            <p>Contactez-nous</p>
+            <h2>Contactez-nous</h2>
         <form>
 
           <div className="form-group">

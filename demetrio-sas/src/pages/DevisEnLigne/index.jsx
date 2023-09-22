@@ -12,7 +12,7 @@ function Devis() {
             <Banner pageTitle={pageTitle}/>
             <section>
                 <h2>Devis en ligne : Simple, Rapide et Efficace</h2>
-                <p>Obtenez votre devis personnalisé en ligne pour vos projets de Plomberie, Chauffage et Pompes à Chaleur en quelques clics par des experts certifiés RGE QualiPAC</p>
+                <p className='section-text'>Obtenez votre devis personnalisé en ligne pour vos projets de Plomberie, Chauffage et Pompes à Chaleur en quelques clics par des experts certifiés RGE QualiPAC</p>
                 <div className='container__devis'>
                     <div className='devis__content'>
                         <div className='devis__content-text'>
@@ -21,9 +21,9 @@ function Devis() {
                             <p>Vous pouvez joindre une photo de votre panne ou les plans de votre projet.</p>
                             <p>Nous étudierons votre demande dans les plus brefs délais.</p>
                         </div>
-                        <img src={ImgDevis} alt='Plan maison'/>
+                        <img className='devis__content-img' src={ImgDevis} alt='Plan maison'/>
                     </div>
-                    <DevisForm />
+                    <DevisForm id='devis__form' />
                 </div>
             </section>
 

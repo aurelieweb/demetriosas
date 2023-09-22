@@ -18,7 +18,7 @@ function Card({ serviceName, serviceSection, imageUrl }) {
             ? faFaucet
             : serviceSection === 'chauffage'
             ? faThermometer
-            : faHome
+            : faHome 
         }
       />
     )
@@ -31,7 +31,7 @@ function Card({ serviceName, serviceSection, imageUrl }) {
   return (
     <Link to={anchorLink} className="card-link">
       <div className="card">
-        {icon}
+        <span  className='card-span'>{icon}</span>
         <div className="card__content">
           <h3>{serviceName}</h3>
           <p>+ d'infos</p>
