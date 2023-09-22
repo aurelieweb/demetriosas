@@ -40,9 +40,9 @@ function Contact() {
                 </div>
         </div>
             </section>
-            <section>
-            <div className="contact-form">
-            <h2>Contactez-nous</h2>
+            <section id='form__section' >
+            <div className="contact__form">
+            <h2>Contactez-nous</h2>   
         <form>
 
           <div className="form-group">

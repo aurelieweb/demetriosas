@@ -2,10 +2,28 @@ import React from 'react';
 import Banner from '../../components/Banner';
 import DevisForm from'../../components/DevisForm';
 import ImgDevis from '../../assets/imgDevis.jpg'
+import ImgRge from '../../assets/imgQualipac.png'
 
 function Devis() {
 
     const pageTitle = "Devis en Ligne Plomberie, Chauffage et Pompe à Chaleur à Thonon-les-Bains";
+
+    const questions = [
+        {
+          question: "De que type de demande s'agit-il ?",
+          options: ["Une demande d'intervention", 'Une demande de devis'],
+        },
+        {
+            question: "S'agit-il d'une demande de dépannage?",
+            options: ['Oui', 'Non'],
+          },
+        {
+          question: 'Quel domaine concerne votre demande?',
+          options: ['Plomberie', 'Chauffage', 'Pompe à chaleur'],
+        },
+        
+        // Ajoutez d'autres questions selon les besoins du client
+      ];
 
     return (
         <div className='main'>
@@ -23,7 +41,11 @@ function Devis() {
                         </div>
                         <img className='devis__content-img' src={ImgDevis} alt='Plan maison'/>
                     </div>
-                    <DevisForm id='devis__form' />
+                    <DevisForm id='devis__form' className='devis__form' questions={questions} />
+                    <div className='rge-div'>
+                        <img className='rge-img' src={ImgRge} alt='RGE qualipac Thonon' />
+                        <p>Nos installations de pompes à chaleur sont assurés par des experts certifiés RGE QualiPAC, garantissant qualité et efficacité</p>
+                    </div>
                 </div>
             </section>
 

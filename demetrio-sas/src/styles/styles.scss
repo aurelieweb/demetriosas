@@ -119,6 +119,7 @@ p {
 
 .banner {
     height: 500px;
+    width: 100%;
 
     &-image{
         width: 100%;
@@ -129,7 +130,7 @@ p {
     &-content{
         position: relative;
         left: 50px;
-        bottom: 350px;
+        bottom: 500px;
         p{
             text-align: left;
             font-size: 96px;
@@ -149,7 +150,6 @@ button {
     background-color: $darkgreen;
     color: $blue;
     border-radius: 50px;
-    margin-top: 50px;
 }
 .menu{
     display: flex;
@@ -387,18 +387,23 @@ button {
     justify-content: center;
     align-items: center;
     background-color: #a7d403;
-    width: 520px;
+    width: 300px;
     height: 150px;
+    border-radius: 5px;
+    transform: rotate(-10grad);
     position: relative;
-    top: -1000px;
-    left: 60px;
-    padding: 20px;
+    bottom: 450px;
+    left: 50px;
     .rge-img {
         width: 100px;
+        position: relative;
+        top: -25px;
     }
     p {
         color: $darkgreen;
         opacity: 1;
+        position: relative;
+        top: -25px;
     }
   }
 
@@ -436,7 +441,7 @@ button {
 }
 /*----------------------------Fin Nos réalisations----------
 
-  /*----------------------Devis en ligne-------------------
+/*----------------------Devis en ligne-------------------
 
   /*
   -
@@ -444,22 +449,38 @@ button {
   .container__devis {
     .devis__content {
       display: flex;
-      flex-direction: row;
+      flex-direction: row-reverse;
       &-text {
+        margin: 0 50px;
           p {
               text-align: left;
               opacity: 1;
           }
       }
       &-img {
-          max-width: 50%;
+          width: 300px
       }
     }
-    #devis__form {
-      &-title  {
-          text-align: center;
-          margin: 50px 0;
-      }
+    .devis__container-form {
+        width: 50%;
+        color: $green;
+        background-color: $darkgreen;
+    }
+    .devis__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+
+        &-questions {
+            display: flex;
+            flex-direction: column;
+        }
+        &-title  {
+            text-align: center;
+            margin: 50px 0;
+        }
     }
   }
 
@@ -500,6 +521,7 @@ button {
 #contact__section {
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 .contact__container{
     display: flex;
@@ -529,6 +551,19 @@ button {
     }
 }
 /* Style pour le formulaire */
+
+#form__section {
+    display: flex;
+    justify-content: center;
+}
+.contact__form {
+    background-color: $darkgreen;
+    border-radius: 5px;
+    width: 80%;
+    h2 {
+    color: $green;
+    }
+}
 form {
     margin: 0 auto;
     padding: 20px;
@@ -536,7 +571,7 @@ form {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     color: $green;
-    width: calc(80% - (40px));
+    width: calc(100% - (40px));
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
