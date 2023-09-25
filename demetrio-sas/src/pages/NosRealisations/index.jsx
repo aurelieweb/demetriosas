@@ -4,7 +4,7 @@ import Gallery from '../../components/Gallery';
 
 function NosRealisations() {
 
-    const pageTitle = "Expert plomberie, Chauffage et Pompe à chaleur à Thonon les Bains";
+    const pageTitle = "Expert plomberie, Chauffage et Pompe à chaleur à Thonon";
 
     return (
         <div className='main'>

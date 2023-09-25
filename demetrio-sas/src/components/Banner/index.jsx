@@ -1,4 +1,5 @@
 import React from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
 import '../../styles/styles.scss';
 import bannerImg from '../../assets/imgBanner.jpg';
 import Button from '../Button';
@@ -10,7 +11,9 @@ function Banner({ pageTitle }) {
       <div className="banner-content">
         <p>DEMETRIO</p>
         <h1>{pageTitle}</h1>
-        <Button text="Devis en ligne" /> {/* Texte du bouton passé en tant que prop */}
+        <Link to='/devis-en-ligne#devis__form-anchor'>
+          <Button text="Devis en ligne" />
+        </Link>
       </div>
     </div>
   );

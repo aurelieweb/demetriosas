@@ -145,7 +145,7 @@ function DevisForm({ questions }) {
   return (
     <div className='devis__container-form'>
       <h3 id='devis__form-title'>Devis en Ligne</h3>
-      <form className='devis__form' onSubmit={handleSubmit}>
+      <form id='devis__form-anchor' className='devis__form' onSubmit={handleSubmit}>
         {stepContent}
         <button type="submit">
           {currentStep === 3 ? 'Valider' : 'Suivant'}

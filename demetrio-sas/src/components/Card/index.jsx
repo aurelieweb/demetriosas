@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom'; // Importez useLocation pour obtenir la route actuelle
+import { useLocation } from 'react-router-dom'; 
+import { HashLink as Link } from 'react-router-hash-link';// Importez useLocation pour obtenir la route actuelle
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFaucet, faThermometer, faHome } from '@fortawesome/free-solid-svg-icons';
 

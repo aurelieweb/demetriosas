@@ -5,7 +5,7 @@ import Card from '../../components/Card';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faFaucet, faThermometer, faHome } from '@fortawesome/free-solid-svg-icons';
 
-import Imgplomberie from '../../assets/imgPlomberie.jpg';
+import Imgplomberie from '../../assets/imgSdb.jpeg';
 import Imgchauffage from '../../assets/imgChauffage.jpg';
 import Imgpac from '../../assets/imgPac.jpg';
 import ImgRge from '../../assets/imgQualipac.png'
@@ -32,7 +32,7 @@ function NotreSavoirFaire () {
                 </div>
             
             </section>
-            <section  id='plomberie' className='savoirFaire-section'>
+            <section  id="plomberie" className='savoirFaire-section'>
                 <img className="service-img" src={Imgplomberie} alt="Service plomberie Thonon" />
             
                 <div className='savoirFaire-div'>
@@ -53,7 +53,7 @@ function NotreSavoirFaire () {
                 </div>
             </section>
 
-            <section id='chauffage' className='savoirFaire-section'>
+            <section id="chauffage" className='savoirFaire-section'>
                 <img className="service-img" src={Imgchauffage} alt="Service plomberie Thonon" />
                 <div className='savoirFaire-div'>   
                     <h2 className='section-text'>Chauffage à Thonon les bains: Votre partenaire de confiance</h2>
@@ -70,7 +70,7 @@ function NotreSavoirFaire () {
                 </div>
             </section>
 
-            <section id='pac' className='savoirFaire-section'>
+            <section id="pac" className='savoirFaire-section'>
                 <img className="service-img" src={Imgpac} alt="Service plomberie Thonon" />
 
                 <div className='savoirFaire-div'>    
@@ -80,12 +80,13 @@ function NotreSavoirFaire () {
                         <li><FontAwesomeIcon className='check' icon={faCheck} />Installation de pompes à chaleur air-eau</li>
                         <li><FontAwesomeIcon className='check' icon={faCheck} />Remplacement de chaudière fuel/gaz par pompe à chaleur</li>
                     </ul>
+                    <div className='rge__div'>
+                        <img className='rge__div-img' src={ImgRge} alt='RGE qualipac Thonon' />
+                        <p id='rge__div-text' >Nos installations de pompes à chaleur sont assurés par des experts certifiés RGE QualiPAC, garantissant qualité et efficacité</p>
+                    </div>
                 </div>
             </section>
-            <div className='rge-div'>
-                    <img className='rge-img' src={ImgRge} alt='RGE qualipac Thonon' />
-                    <p>Nos installations de pompes à chaleur sont assurés par des experts certifiés RGE QualiPAC, garantissant qualité et efficacité</p>
-            </div>
+            
         </div>
     );
 }

@@ -13,7 +13,7 @@ import LogoHansgrohe from '../../assets/logo-hansgrohe.png';
 
 function Accueil() {
 
-    const pageTitle = "Expert plomberie, Chauffage et Pompe à chaleur à Thonon les Bains";
+    const pageTitle = "Expert plomberie, Chauffage et Pompe à chaleur à Thonon";
 
     const plomberie = "plomberie";
     const chauffage = "chauffage";
