@@ -11,7 +11,7 @@ function Devis() {
     const questions = [
         {
           question: "De quel type de demande s'agit-il ?",
-          options: ["Une demande d'intervention", 'Une demande de devis'],
+          options: ["demande d'intervention", 'demande de devis'],
         },
         {
             question: "S'agit-il d'une demande de dépannage?",

@@ -1,45 +1,65 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
+
 
 function DevisForm({ questions }) {
-  // État local pour stocker les réponses aux questions
   const [answers, setAnswers] = useState({});
   const [currentStep, setCurrentStep] = useState(1);
+  const [userData, setUserData] = useState({
+    nom: '',
+    prenom: '',
+    adresse: '',
+    ville: '',
+    email: '',
+    telephone: '',
+  });
 
-  // Fonction pour gérer la soumission du formulaire
+//ecouteur  d'évenement
   const handleSubmit = (e) => {
     e.preventDefault();
 
+//gestion des étapes du module de devis
     if (currentStep === 1) {
-      // Vérifier si l'utilisateur a répondu à toutes les questions
       if (Object.keys(answers).length === questions.length) {
-        // L'utilisateur a répondu à toutes les questions
-        // Vous pouvez traiter les réponses ici si nécessaire
-
-        // Passer à l'étape suivante
         setCurrentStep(2);
       } else {
         alert('Veuillez répondre à toutes les questions.');
       }
     } else if (currentStep === 2) {
-      // L'utilisateur a terminé l'étape 2 (compléter le message)
-      // Vous pouvez traiter le message ici si nécessaire
-
-      // Passer à l'étape suivante
       setCurrentStep(3);
     } else if (currentStep === 3) {
-      // L'utilisateur a terminé l'étape 3 (compléter les coordonnées)
-      // Vous pouvez traiter les coordonnées ici si nécessaire
+      // Envoyer les réponses par email
+      const emailParams = {
+        to_email: 'contact@demetrio.fr', // Adresse email de destination
+        ...userData,
+        message: answers.message || 'N/A',
+        question: answers.question || 'N/A',
+      };
 
-      // Réinitialiser les réponses et revenir à l'étape 1
-      setAnswers({});
-      setCurrentStep(1);
+//Ajout des question à emailParams
+      questions.forEach((question, index) => {
+        emailParams[`question_${index + 1}`] = answers[index] || 'N/A';
+      });
+
+//envoi de la demande par mail
+      emailjs.send('service_00eietb', 'template_wnv4yi8', emailParams, 'EdXgcOwIk3gngd0yn')
+        .then((response) => {
+          console.log('Email envoyé avec succès :', response);
+          // Vous pouvez ajouter une logique pour gérer la réponse ici
+        })
+        .catch((error) => {
+          console.error('Erreur lors de l\'envoi de l\'email :', error);
+          // Vous pouvez gérer les erreurs ici
+        });
     }
   };
 
-  // Fonction pour gérer le changement de réponse
   const handleAnswerChange = (questionIndex, answer) => {
-    // Mettez à jour les réponses
     setAnswers({ ...answers, [questionIndex]: answer });
+  };
+  
+  const handleFieldChange = (field, value) => {
+    setUserData({ ...userData, [field]: value });
   };
 
   // Rendu en fonction de l'étape actuelle
@@ -81,7 +101,7 @@ function DevisForm({ questions }) {
           id="message"
           value={answers.message || ''}
           onChange={(e) =>
-            setAnswers({ ...answers, message: e.target.value })
+            handleAnswerChange('message', e.target.value) // Utilisez une clé 'message'
           }
           required
         />
@@ -92,52 +112,76 @@ function DevisForm({ questions }) {
     stepContent = (
       <div>
         <div className="form-group">
-          <label htmlFor="nom">Nom :</label>
-          <input
-            type="text"
-            id="nom"
-            className="form-control"
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="prenom">Prénom :</label>
-          <input
-            type="text"
-            id="prenom"
-            className="form-control"
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="email">E-mail :</label>
-          <input
-            type="email"
-            id="email"
-            className="form-control"
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="telephone">Numéro de téléphone :</label>
-          <input
-            type="tel"
-            id="telephone"
-            className="form-control"
-            required
-          />
-          {/* Ajoutez ici les autres champs pour les coordonnées */}
-        </div>
-        <div className="form-group">
-          <label htmlFor="adress">Adresse de l'intervention :</label>
-          <input
-            type="adress"
-            id="adress"
-            className="form-control"
-            required
-          />
-          {/* Ajoutez ici les autres champs pour les coordonnées */}
-        </div>
+  <label htmlFor="nom">Nom :</label>
+  <input
+    type="text"
+    id="nom"
+    className="form-control"
+    value={userData.nom || ''}
+    onChange={(e) => handleFieldChange('nom', e.target.value)}
+    required
+  />
+</div>
+
+<div className="form-group">
+  <label htmlFor="prenom">Prénom :</label>
+  <input
+    type="text"
+    id="prenom"
+    className="form-control"
+    value={userData.prenom || ''}
+    onChange={(e) => handleFieldChange('prenom', e.target.value)}
+    required
+  />
+</div>
+
+<div className="form-group">
+  <label htmlFor="email">E-mail :</label>
+  <input
+    type="email"
+    id="email"
+    className="form-control"
+    value={userData.email || ''}
+    onChange={(e) => handleFieldChange('email', e.target.value)}
+    required
+  />
+</div>
+
+<div className="form-group">
+  <label htmlFor="telephone">Numéro de téléphone :</label>
+  <input
+    type="tel"
+    id="telephone"
+    className="form-control"
+    value={userData.telephone || ''}
+    onChange={(e) => handleFieldChange('telephone', e.target.value)}
+    required
+  />
+</div>
+
+<div className="form-group">
+  <label htmlFor="adresse">Adresse de l'intervention :</label>
+  <input
+    type="text"
+    id="adresse"
+    className="form-control"
+    value={userData.adresse || ''}
+    onChange={(e) => handleFieldChange('adresse', e.target.value)}
+    required
+  />
+</div>
+
+<div className="form-group">
+  <label htmlFor="ville">Ville :</label>
+  <input
+    type="text"
+    id="ville"
+    className="form-control"
+    value={userData.ville || ''}
+    onChange={(e) => handleFieldChange('ville', e.target.value)}
+    required
+  />
+</div>
       </div>
     );
   }
@@ -156,4 +200,3 @@ function DevisForm({ questions }) {
 }
 
 export default DevisForm;
-
