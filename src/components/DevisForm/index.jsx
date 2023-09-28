@@ -33,8 +33,26 @@ function DevisForm({ questions }) {
       // Réinitialiser les réponses et revenir à l'étape 1
       setAnswers({});
       setCurrentStep(1);
-    }
-  };
+
+   // Envoi des données au serveur Express
+   fetch('/envoyer-devis', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(answers),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log('Réponse du serveur :', data);
+      // Vous pouvez ajouter une logique pour gérer la réponse du serveur ici
+    })
+    .catch((error) => {
+      console.error('Erreur lors de l\'envoi de la requête :', error);
+      // Vous pouvez gérer les erreurs ici
+    });
+  }
+};
 
   // Fonction pour gérer le changement de réponse
   const handleAnswerChange = (questionIndex, answer) => {
