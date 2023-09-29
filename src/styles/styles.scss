@@ -563,7 +563,7 @@ button {
     color: $green;
     }
 }
-form {
+.form {
     margin: 0 auto;
     padding: 20px;
     background-color: #002A3B;
@@ -616,7 +616,13 @@ form {
 
   
   /* Style pour le bouton "Valider" */
-  button[type="submit"] {
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+  .form__button{
     background-color: $green;
     color: $darkgreen;
     padding: 10px 20px;

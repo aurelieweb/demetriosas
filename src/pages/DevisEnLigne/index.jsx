@@ -9,21 +9,25 @@ function Devis() {
     const pageTitle = "Devis en Ligne Plomberie, Chauffage et Pompe à Chaleur à Thonon";
 
     const questions = [
-        {
-          question: "De quel type de demande s'agit-il ?",
-          options: ["demande d'intervention", 'demande de devis'],
-        },
-        {
-            question: "S'agit-il d'une demande de dépannage?",
-            options: ['Oui', 'Non'],
-          },
-        {
-          question: 'Quel domaine concerne votre demande?',
-          options: ['Plomberie', 'Chauffage', 'Pompe à chaleur'],
-        },
-        
-        // Ajoutez d'autres questions selon les besoins du client
-      ];
+      {
+        id: '1',
+        question: "De quel type de demande s'agit-il ?",
+        options: ["Demande d'intervention", 'Demande de devis'],
+      },
+      {
+        id: '2',
+        question: "S'agit-il d'une demande de dépannage?",
+        options: ['Oui', 'Non'],
+      },
+      {
+        id: '3',
+        question: 'Quel domaine concerne votre demande?',
+        options: ['Plomberie', 'Chauffage', 'Pompe à chaleur'],
+      },
+      
+      // Ajoutez d'autres questions selon les besoins du client
+    ];
+    
 
     return (
         <div className='main'>
