@@ -33,7 +33,7 @@ function NotreSavoirFaire () {
             
             </section>
             <section  id="plomberie" className='savoirFaire-section'>
-                <img className="service-img" src={Imgplomberie} alt="Service plomberie Thonon" />
+                <img className="service-img" src={Imgplomberie} alt="Création de salle de bains style industriel, nature à Thonon" />
             
                 <div className='savoirFaire-div'>
                     <h2 className='section-text'>Services de Plomberie: Installation et Dépannage à Thonon les Bains</h2>
@@ -54,7 +54,7 @@ function NotreSavoirFaire () {
             </section>
 
             <section id="chauffage" className='savoirFaire-section'>
-                <img className="service-img" src={Imgchauffage} alt="Service plomberie Thonon" />
+                <img className="service-img" src={Imgchauffage} alt="Réglage thermostat d'ambiance Thonon" />
                 <div className='savoirFaire-div'>   
                     <h2 className='section-text'>Chauffage à Thonon les bains: Votre partenaire de confiance</h2>
                     <p>Découvrez notre gamme complète de services de chauffage dédiés à votre confort. De l'installation à l'entretien, nous sommes votre partenaire de confiance pour créer un environnement chaleureux et confortable au sein de votre foyer.</p>
@@ -71,7 +71,7 @@ function NotreSavoirFaire () {
             </section>
 
             <section id="pac" className='savoirFaire-section'>
-                <img className="service-img" src={Imgpac} alt="Service plomberie Thonon" />
+                <img className="service-img" src={Imgpac} alt="Installation de pompe à chaleur Thonon, Allinges" />
 
                 <div className='savoirFaire-div'>    
                     <h2 className='section-text'>Installation de pompe à chaleur à Thonon les Bains et dans le chablais</h2>
@@ -81,7 +81,7 @@ function NotreSavoirFaire () {
                         <li><FontAwesomeIcon className='check' icon={faCheck} />Remplacement de chaudière fuel/gaz par pompe à chaleur</li>
                     </ul>
                     <div className='rge__div'>
-                        <img className='rge__div-img' src={ImgRge} alt='RGE qualipac Thonon' />
+                        <img className='rge__div-img' src={ImgRge} alt='Demetrio, Artisan RGE qualipac Thonon, allinges' />
                         <p id='rge__div-text' >Nos installations de pompes à chaleur sont assurés par des experts certifiés RGE QualiPAC, garantissant qualité et efficacité</p>
                     </div>
                 </div>

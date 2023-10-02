@@ -11,6 +11,8 @@ function Card({ serviceName, serviceSection, imageUrl }) {
 
   const isNotreSavoirFairePage = location.pathname === '/notre-savoir-faire';
 
+  const altText = `Expert ${serviceName} à Thonon, allinges et chablais`;
+
   const icon = isNotreSavoirFairePage
     ? (
       <FontAwesomeIcon
@@ -24,7 +26,7 @@ function Card({ serviceName, serviceSection, imageUrl }) {
       />
     )
     : (
-      <img className="card__image" src={imageUrl} alt={serviceName} />
+      <img className="card__image" src={imageUrl} alt={altText} />
     );
 
   const anchorLink = `/notre-savoir-faire#${serviceSection}`;

@@ -19,14 +19,14 @@ function Header() {
           <a href="mailto:contact@demetrio.fr"> <FontAwesomeIcon icon={faEnvelope} />contact@demetrio.fr</a>
         </div>
         <div className='header__contact-media'>
-          <a href='https://www.facebook.com/demetrio.cp'><FontAwesomeIcon icon={faFacebook} /></a>
-          <a href='https://www.instagram.com/demetrio_cp/'><FontAwesomeIcon icon={faInstagram} /></a>
-          <a href='https://fr.linkedin.com/company/demetrio'><FontAwesomeIcon icon={faLinkedin} /></a>
+          <a href='https://www.facebook.com/demetrio.cp'> aria-label='Facebook' <FontAwesomeIcon icon={faFacebook} /></a>
+          <a href='https://www.instagram.com/demetrio_cp/'> aria-label='Instagram' <FontAwesomeIcon icon={faInstagram} /></a>
+          <a href='https://fr.linkedin.com/company/demetrio'> aria-label='Linkedin' <FontAwesomeIcon icon={faLinkedin} /></a>
         </div>
       </div>
       <nav className="nav">
         <Link to="/">
-          <img className="logo" src={logo} alt="Logo" />
+          <img className="logo" src={logo} alt="Logo Demetrio, expert plomberie, chauffage et pompe à chaleur" />
         </Link>
         <Menu /> {/* Utilisez le composant de menu ici */}
       </nav>

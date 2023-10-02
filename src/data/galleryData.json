@@ -2,8 +2,8 @@
     {
         "id": 1,
         "img": "chemin/vers/image1.jpg",
-        "description": "Description de l'image 1",
-        "lieu": "Lieu de la photo 1"
+        "description": "Rénovation d'une salle de bains",
+        "lieu": "Anthy"
     },
     {
         "id": 2,

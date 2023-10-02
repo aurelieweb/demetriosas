@@ -40,11 +40,11 @@ function Accueil() {
                 <h2>Fiabilité et performance :<br />  Nos marques de références</h2>
                 <p className='section-text'>Chaque marque que nous proposons est une garantie de qualité, de durabilité et de performances supérieures dans le domaine de la plomberie, du chauffage et des pompes à chaleur.</p>
                 <div className='container__label'>
-                    <a href='https://www.atlantic.fr/' className='label' ><img src={LogoAtlantic} alt='LogoAtlantic'/></a>
-                    <a href='https://www.thermor.fr/' className='label'><img src={LogoThermor} alt='LogoAtlantic'/></a>
-                    <a href='https://www.cedeo.fr/' className='label'><img src={LogoCedeo} alt='LogoAtlantic'/></a>
-                    <a href='https://www.grohe.fr/fr_fr/particuliers.html?target_group=end' className='label'><img src={LogoGrohe} alt='LogoAtlantic'/></a>
-                    <a href='https://www.hansgrohe.fr/' className='label'><img src={LogoHansgrohe} alt='LogoAtlantic'/></a>
+                    <a href='https://www.atlantic.fr/' className='label' ><img src={LogoAtlantic} alt='Demetrio, installateur Atlantic'/></a>
+                    <a href='https://www.thermor.fr/' className='label'><img src={LogoThermor} alt='Demetrio, installateur Thermor'/></a>
+                    <a href='https://www.cedeo.fr/' className='label'><img src={LogoCedeo} alt='Demetrio, installateur Cedeo'/></a>
+                    <a href='https://www.grohe.fr/fr_fr/particuliers.html?target_group=end' className='label'><img src={LogoGrohe} alt='Demetrio, installateur Grohe'/></a>
+                    <a href='https://www.hansgrohe.fr/' className='label'><img src={LogoHansgrohe} alt='Demetrio, installateur Hansgrohe'/></a>
                 </div>
             </section>
         </div>
