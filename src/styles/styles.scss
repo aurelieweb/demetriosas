@@ -144,12 +144,13 @@ p {
 }
 
 button {
-    width: 150px;
+    width: 120px;
     height: 40px;
     font-weight: bold;
     background-color: $darkgreen;
     color: $blue;
     border-radius: 50px;
+    border: none;
 }
 .menu{
     display: flex;
@@ -381,31 +382,6 @@ button {
     }
 }
 
-.rge__div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: $green;
-    width: 100%;
-    height: 120px;
-
-    &-img {
-        width: 100px;
-    position: relative;
-    top: -35px;
-    }
-    #rge__div-text {
-        text-align: center;
-        margin: 0;
-        padding: 0 20px;
-        color: $darkgreen;
-        opacity: 1;
-        position: relative;
-        top: -30px;
-    }
-}
-
 /*-----------------------Nos réalisations--------------- 
 /*Gallery*/
 
@@ -413,26 +389,35 @@ button {
 - améliorer
 */
 
+.gallery__section{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .gallery {
     display: flex;
     justify-content: space-around;
     background-color: $darkgreen;
     flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0;
+    max-width: 1200px;
 }
 
 .gallery__card {
     display: flex;
     flex-direction: column;
-    border: 1px solid #ccc;
-    margin: 10px;
-    padding: 10px;
-    width: 200px;
+    /* border: 1px solid #ccc; */
+    max-width: 300px;
     background-color: white;
+    border-radius: 5px;
 }
 
 .gallery__card-img {
-    max-width: 100%;
     object-fit: cover;
+    border-radius: 5px 5px 0 0;
 }
 
 .gallery__card-content {
@@ -446,69 +431,69 @@ button {
   -
   */
   .container__devis {
+    display: flex;
+
     .devis__content {
       display: flex;
-      flex-direction: row-reverse;
+      flex-direction: column;
+      margin: 0 50px;
       &-text {
-        margin: 0 50px;
+        margin: 0;
           p {
               text-align: left;
               opacity: 1;
           }
       }
       &-img {
-          width: 300px
+          max-width: 60%;
+          min-width: 250px;
       }
     }
     .devis__container-form {
         width: 50%;
-        color: $green;
-        background-color: $darkgreen;
+        @include form;
+        margin: 0 50px 0 0;
     }
+    
     .devis__form {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 80%;
+        padding: 20px 0;
+        
+        &-msg{
+            display: flex;
+            flex-direction: column;
+            label{
+                margin-bottom: 8px;
+            opacity: 0.7;
+            }
+            #message {
+                min-height: 150px;
+
+            }
+        }
 
         &-questions {
             display: flex;
             flex-direction: column;
+            margin-top: 20px;
+            label {
+                margin-bottom: 8px;
+                opacity: 0.7;
+            }
         }
         &-title  {
             text-align: center;
-            margin: 50px 0;
         }
     }
   }
 
-  
-  /*
-  -
-  */
-.container__devis {
-    .devis__content {
-      display: flex;
-      flex-direction: row;
-      &-text {
-          p {
-              text-align: left;
-              opacity: 1;
-          }
-      }
-      &-img {
-          max-width: 50%;
-      }
-    }
-    #devis__form {
-      &-title  {
-          text-align: center;
-          margin: 50px 0;
-      }
-    }
+  #devis__form-group{
+    width: 100%;
   }
-  
 /*---------------------------Fin devis en ligne------------
 
 /*----------------------------Contact--------------------
@@ -564,20 +549,10 @@ button {
     }
 }
 .form {
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #002A3B;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: $green;
+    @include form;
     width: calc(100% - (40px));
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
 
-    .form-group{
+    &-group{
         display: flex;
         flex-direction: column;
         width: calc(50% - (10px));
@@ -588,6 +563,7 @@ button {
             justify-content: space-between;
             font-weight: bold;
             margin-bottom: 8px;
+            opacity: 0.7;
           }
 
         input[type="text"],
@@ -603,6 +579,8 @@ button {
             font-size: 16px;
         }
     }
+
+
 
     .form-style{
         width: 100%;
@@ -623,11 +601,16 @@ button {
 }
 
   .form__button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: $green;
     color: $darkgreen;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
     cursor: pointer;
     font-size: 16px;
   }
@@ -659,3 +642,10 @@ button {
   /* justify-content: center; */
   padding: 20px;
 }
+
+.sr-only {
+    display: none;
+}
+
+
+

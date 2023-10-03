@@ -1,9 +1,8 @@
 import React from 'react';
 import Banner from '../../components/Banner';
 import DevisForm from'../../components/DevisForm';
-import ImgDevis from '../../assets/imgDevis.jpg'
+import ImgDevis from '../../assets/imgDevis.jpg';
 
-import ImgRge from '../../assets/imgQualipac.png'
 function Devis() {
 
     const pageTitle = "Devis en Ligne Plomberie, Chauffage et Pompe à Chaleur à Thonon";
@@ -45,11 +44,8 @@ function Devis() {
                 </div>
                 <img className='devis__content-img' src={ImgDevis} alt='Plan maison'/>
               </div>
+
               <DevisForm id='devis__form-anchor' className='devis__form' questions={questions} />
-              <div className='rge__div'>
-                <img className='rge__div-img' src={ImgRge} alt='RGE qualipac Thonon' />
-                <p id='rge__div-text' >Nos installations de pompes à chaleur sont assurés par des experts certifiés RGE QualiPAC, garantissant qualité et efficacité</p>
-              </div>
             </div>
           </section>
 

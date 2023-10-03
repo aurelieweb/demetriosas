@@ -1,38 +1,56 @@
 [
     {
         "id": 1,
-        "img": "chemin/vers/image1.jpg",
+        "cover": "anthy1.jpeg",
+        "img": ["anthy1.jpeg",
+                "anthy2.jpg"
+        ],
         "description": "Rénovation d'une salle de bains",
         "lieu": "Anthy"
     },
     {
         "id": 2,
-        "img": "chemin/vers/image2.jpg",
-        "description": "Description de l'image 2",
-        "lieu": "Lieu de la photo 2"
+        "cover": "publier1.jpeg",
+        "img": ["anthy1.jpeg",
+        "anthy2.jpg"
+        ],
+        "description": "Installation d'une pompe à chaleur",
+        "lieu": "Publier"
     },
     {
         "id": 3,
-        "img": "chemin/vers/image3.jpg",
+        "cover": "anthy1.jpeg",
+        "img": ["anthy1.jpg",
+        "anthy2.jpeg"
+        ],
         "description": "Description de l'image 3",
         "lieu": "Lieu de la photo 3"
     },
     {
       "id": 4,
-      "img": "chemin/vers/image2.jpg",
+      "cover": "anthy1.jpeg",
+      "img": ["anthy1.jpg",
+      "anthy2.jpeg"
+      ],
       "description": "Description de l'image 2",
       "lieu": "Lieu de la photo 2"   
       },
       {
         "id": 5,
-        "img": "chemin/vers/image2.jpg",
+        "cover": "anthy1.jpeg",
+        "img": ["anthy1.jpg",
+        "anthy2.jpeg"
+        ],
         "description": "Description de l'image 2",
         "lieu": "Lieu de la photo 2"
       },
       {
         "id": 6,
+        "cover": "anthy1.jpeg",
         "img": "chemin/vers/image3.jpg",
-        "description": "Description de l'image 3",
+        "description": ["anthy1.jpg",
+        "anthy2.jpeg"
+        ],
         "lieu": "Lieu de la photo 3"
       }
   ]

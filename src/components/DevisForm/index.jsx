@@ -32,7 +32,7 @@ function Step1({ questions, answers, handleAnswerChange }) {
 
 function Step2({ answers, handleAnswerChange }) {
   return (
-    <div>
+    <div className='devis__form-msg'>
       <label htmlFor="message">Pouvez-vous nous en dire plus au sujet de votre demande :</label>
       <textarea
         id="message"
@@ -49,7 +49,7 @@ function Step2({ answers, handleAnswerChange }) {
 function Step3({ userData, handleFieldChange }) {
   return (
     <div className='form'>
-      <div className="form-group">
+      <div className="form-group" id="devis__form-group">
         <label htmlFor="nom">Nom :</label>
         <input
         type="text"
@@ -61,7 +61,7 @@ function Step3({ userData, handleFieldChange }) {
         />
       </div>
 
-      <div className="form-group">
+      <div className="form-group" id="devis__form-group">
         <label htmlFor="prenom">Prénom :</label>
         <input
         type="text"
@@ -73,7 +73,7 @@ function Step3({ userData, handleFieldChange }) {
         />
       </div>
 
-      <div className="form-group">
+      <div className="form-group" id="devis__form-group">
         <label htmlFor="email">E-mail :</label>
         <input
         type="email"
@@ -85,7 +85,7 @@ function Step3({ userData, handleFieldChange }) {
         />
       </div>
 
-      <div className="form-group">
+      <div className="form-group" id="devis__form-group">
         <label htmlFor="telephone">Numéro de téléphone :</label>
         <input
         type="tel"
@@ -97,7 +97,7 @@ function Step3({ userData, handleFieldChange }) {
         />
       </div>
 
-      <div className="form-group">
+      <div className="form-group" id="devis__form-group">
         <label htmlFor="adresse">Adresse de l'intervention :</label>
         <input
         type="text"
@@ -109,7 +109,7 @@ function Step3({ userData, handleFieldChange }) {
         />
       </div>
 
-      <div className="form-group">
+      <div className="form-group" id="devis__form-group">
         <label htmlFor="ville">Ville :</label>
         <input
         type="text"
@@ -227,7 +227,7 @@ function DevisForm({ questions }) {
         </div>
       ) : (
         <div>
-          <h3 id='devis__form-title'>Devis en Ligne</h3>
+          <h3 className='devis__form-title'>Formulaire de demande de devis en Ligne</h3>
           <form id='devis__form-anchor' className='form' onSubmit={handleSubmit}>
             {currentStepComponent}
             <div className="buttons">

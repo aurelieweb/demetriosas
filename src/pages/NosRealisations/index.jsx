@@ -9,7 +9,7 @@ function NosRealisations() {
     return (
         <div className='main'>
             <Banner pageTitle={pageTitle}/>
-            <section>
+            <section className='gallery__section'>
                 <h2>Découvrez Nos Réalisations en Plomberie, Chauffage et Pompes à Chaleur</h2>
                 <Gallery />
             </section>

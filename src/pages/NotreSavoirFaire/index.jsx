@@ -8,7 +8,7 @@ import { faCheck, faFaucet, faThermometer, faHome } from '@fortawesome/free-soli
 import Imgplomberie from '../../assets/imgSdb.jpeg';
 import Imgchauffage from '../../assets/imgChauffage.jpg';
 import Imgpac from '../../assets/imgPac.jpg';
-import ImgRge from '../../assets/imgQualipac.png'
+
 
 
 function NotreSavoirFaire () {
@@ -80,10 +80,6 @@ function NotreSavoirFaire () {
                         <li><FontAwesomeIcon className='check' icon={faCheck} />Installation de pompes à chaleur air-eau</li>
                         <li><FontAwesomeIcon className='check' icon={faCheck} />Remplacement de chaudière fuel/gaz par pompe à chaleur</li>
                     </ul>
-                    <div className='rge__div'>
-                        <img className='rge__div-img' src={ImgRge} alt='Demetrio, Artisan RGE qualipac Thonon, allinges' />
-                        <p id='rge__div-text' >Nos installations de pompes à chaleur sont assurés par des experts certifiés RGE QualiPAC, garantissant qualité et efficacité</p>
-                    </div>
                 </div>
             </section>
             
