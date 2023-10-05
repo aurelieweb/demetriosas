@@ -37,7 +37,7 @@ function Card({ serviceName, serviceSection, imageUrl }) {
         <span  className='card-span'>{icon}</span>
         <div className="card__content">
           <h3>{serviceName}</h3>
-          <p>+ d'infos</p>
+          <p>+ d'info</p>
         </div>
       </div>
     </Link>
