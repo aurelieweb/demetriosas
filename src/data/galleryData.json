@@ -3,7 +3,8 @@
         "id": 1,
         "cover": "anthy1.jpeg",
         "img": ["anthy1.jpeg",
-                "anthy2.jpg"
+                "anthy2.jpg",
+                "publier1.jpeg"
         ],
         "description": "Rénovation d'une salle de bains",
         "lieu": "Anthy"

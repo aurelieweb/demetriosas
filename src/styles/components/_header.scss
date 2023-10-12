@@ -1,0 +1,81 @@
+.header {
+    @include container;
+    margin-bottom: 0;
+
+    &__contact{
+        margin: 10px 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        @include mobile {
+            flex-direction: column;
+            width: 100%;
+            background-color: $darkgreen;
+            margin: 0;
+        }
+
+        &-details {
+            display: flex;
+            justify-content: space-between;
+
+
+            a {
+                justify-content: flex-end;
+                align-items: center;
+                text-decoration: none;
+                display: flex;
+                color: #002A3B;
+                gap: 10px;
+
+                &:hover {
+                    color: $blue;
+                    transform: scale(1.10);
+                }
+
+                @include mobile {
+                    color: $green;
+                    padding: 10px;
+                }
+            }
+        }
+
+        &-media {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+
+            @include mobile {
+                justify-content: flex-end;
+                padding: 10px;
+            }
+
+            a {
+                color: $darkgreen;
+                transition: transform 0.3s;
+
+                @include mobile {
+                    color: $green;
+                }
+
+                &:hover {
+                    color: $blue;
+                    transform: scale(1.30);
+                }
+            }
+        }
+    }
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60px;
+
+    .logo {
+        margin-left: 30px;
+    }
+}
+

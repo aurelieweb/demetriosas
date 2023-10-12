@@ -1,0 +1,32 @@
+#contact__section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.contact__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    width: 80%;
+}
+.contact__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #002A3B;
+    color: #a7d403;
+    width: 30%;
+    padding: 10px;
+    border-radius: 5px;
+    min-width: 180px;
+    font-size: 30px;
+    &-title {
+        display: none;
+    }
+    p {
+        color: white;
+        opacity: 1;
+        font-size: 16px;
+    }
+}

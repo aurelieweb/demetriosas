@@ -1,0 +1,58 @@
+.slide {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $darkgreen;
+    color: white;
+    height: 350px;
+    @include mobile {
+      flex-direction: column;
+      background: none;
+      height: auto;
+    }
+    
+    &__image {
+      max-width: 40%;
+      height: 100%;
+      @include mobile{
+        max-width: 100%;
+      }
+    }
+    
+    &__content {
+      flex-grow: 1;
+      height: 100%;
+      background-color: $darkgreen;
+      
+      &-tab {
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          border-bottom: 1px solid white;
+          height: 50px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          
+          li {
+            padding: 10px;
+            cursor: pointer;
+            
+            &.active { 
+                color : white;
+                border-bottom: 5px solid $green; 
+            }
+            &:hover {
+                color: $green;
+            }
+          }
+        }
+      }
+      
+      &-text {
+        margin: 20px 40px;
+      }
+    }
+}

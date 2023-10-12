@@ -1,0 +1,64 @@
+button {
+    width: 120px;
+    height: 40px;
+    font-weight: bold;
+    background-color: $darkgreen;
+    
+    color: $blue;
+    border-radius: 50px;
+    border: none;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s;
+
+    &:hover {
+        color: $darkgreen;
+        background-color: $green;
+        transform: scale(1.1);
+
+        &::after {
+            opacity: 1;
+        }
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: linear-gradient(to bottom right, lighten($green, 5), lighten($darkgreen, 5));
+        opacity: 0;
+        z-index: -1;
+        border-radius: 50px;
+        transition : opacity 250ms;
+        box-shadow: $box-shadows-hover;
+    } 
+}
+  
+  /* Style pour le bouton "Valider" */
+
+  .buttons {
+    display: flex;
+    gap: 10px;
+}
+    .form__button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $green;
+        color: $darkgreen;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 10px;
+        width: 100px;
+        height: 30px;
+        cursor: pointer;
+        font-size: 16px;
+
+        &::after {
+            content: "";
+            border-radius: 10px;
+        }
+    }
+

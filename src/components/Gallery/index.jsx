@@ -15,6 +15,13 @@ function Gallery() {
     setSelectedItem(null);
   };
 
+  const goToPreviousSlide = () => {
+    setSelectedItem((selectedItem - 1 + galleryData.length) % galleryData.length);
+  };
+
+  const goToNextSlide = () => {
+    setSelectedItem((selectedItem + 1) % galleryData.length);
+  };
 
   return (
     <div className="gallery">
@@ -33,19 +40,35 @@ function Gallery() {
           <button className="close-button" onClick={closeSlideshow}>
             <span>&times;</span>
           </button>
-          <Carousel
-            showThumbs={false}
-            selectedItem={selectedItem}
-          >
-            {galleryData[selectedItem].img.map((imageName, index) => (
-              <div key={index}>
-                <img src={process.env.PUBLIC_URL + `/photoGallery/${imageName}`} alt={galleryData[selectedItem].description} />
-                <p>{galleryData[selectedItem].description}</p>
-                <p>{galleryData[selectedItem].lieu}</p>
-              </div>
-            ))}
-          </Carousel>
-        </div>
+          <div className='carousel-container'>
+            <Carousel showThumbs={false} selectedItem={selectedItem}>
+              {galleryData[selectedItem].img.map((imageName, index) => (
+                <div className="test" key={index}>
+                  <img src={process.env.PUBLIC_URL + `/photoGallery/${imageName}`} alt={galleryData[selectedItem].description} />
+                  <p>{galleryData[selectedItem].description}</p>
+                  <p>{galleryData[selectedItem].lieu}</p>
+                </div>
+              ))}
+            </Carousel>
+                <div className='carousel-arrow-container'>
+            {/* Flèche gauche */}
+            <button
+              className="carousel-arrow"
+              onClick={goToPreviousSlide}
+            >
+              <span>&lt;</span>
+            </button>
+
+            {/* Flèche droite */}
+            <button
+              className="carousel-arrow"
+              onClick={goToNextSlide}
+            >
+              <span>&gt;</span>
+            </button>
+            </div>
+          </div>
+          </div>
       )}
     </div>
   );
