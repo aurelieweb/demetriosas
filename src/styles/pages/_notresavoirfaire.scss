@@ -29,9 +29,17 @@
             list-style: none;
             
             li {
+                display: flex;
+                align-items: flex-start;
 
                 .check {
+                margin-right: 5px;
                 color: $green;
+                }
+
+                p{
+                    opacity: 1;
+                    margin: 0;
                 }
             }
         }

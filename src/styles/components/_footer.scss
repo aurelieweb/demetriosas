@@ -12,8 +12,9 @@
     &__media{
         display: flex;
         justify-content: space-between;
-        width: 20%;
-        height: 50px;
+        align-items: center;
+        height: 80px;
+        gap: 20px;
 
         a{ 
             color: $darkgreen;
@@ -23,14 +24,33 @@
     }
     .menu{
         justify-content: space-between;
-        height: 50px;
+        height: auto;
+        width: auto;
+
+        &__burger{
+            display: none;
+        }
+
+        &__list{
+            @include mobile {
+                flex-direction: column;
+                padding: 0;
+            }
+        }
 
         &__item{
+            display: flex;
+
+            &-link{
+                opacity: 0.45;
+                margin: 2.5px;
+            }
 
             &:hover {
                 border-bottom: none;
                 a {
                 color: $blue;
+                opacity: 1;
                 }
             }
         }

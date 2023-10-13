@@ -39,16 +39,16 @@ function NotreSavoirFaire () {
                     <h2 className='section-text'>Services de Plomberie: Installation et Dépannage à Thonon les Bains</h2>
                     <p>Notre expertise en plomberie est la garantie d'une solution efficace à tous vos besoins. Nous sommes prêts à résoudre tous vos problèmes de plomberie, de la fuite au projet de création ou rénovation de salle de bains.</p>
                     <ul>
-                        <li><FontAwesomeIcon className='check' icon={faCheck} /> Dépannage plomberie</li>
-                        <li><FontAwesomeIcon className='check' icon={faCheck} /> Réparation de fuite</li>
-                        <li><FontAwesomeIcon className='check' icon={faCheck} /> Installation et remplacement de robinet</li>
-                        <li><FontAwesomeIcon className='check' icon={faCheck} /> Débouchage de canalisations</li>
-                        <li><FontAwesomeIcon className='check' icon={faCheck} /> Rénovation de salle de bains</li>
-                        <li><FontAwesomeIcon className='check' icon={faCheck} /> Installation et remplacement chauffe-eau</li>
-                        <li><FontAwesomeIcon className='check' icon={faCheck} /> Installation et remplacement chauffe-eau thermodynamique</li>
-                        <li><FontAwesomeIcon className='check' icon={faCheck} /> Installation de tuyauterie</li>
-                        <li><FontAwesomeIcon className='check' icon={faCheck} /> Installation réseau plomberie neuf et rénovation</li>
-                        <li><FontAwesomeIcon className='check' icon={faCheck} /> Remplacement wc</li>
+                        <li><FontAwesomeIcon className='check' icon={faCheck} /> <p>Dépannage plomberie</p></li>
+                        <li><FontAwesomeIcon className='check' icon={faCheck} /> <p>Réparation de fuite</p></li>
+                        <li><FontAwesomeIcon className='check' icon={faCheck} /> <p>Installation et remplacement de robinet</p></li>
+                        <li><FontAwesomeIcon className='check' icon={faCheck} /> <p>Débouchage de canalisations</p></li>
+                        <li><FontAwesomeIcon className='check' icon={faCheck} /> <p>Rénovation de salle de bains</p></li>
+                        <li><FontAwesomeIcon className='check' icon={faCheck} /> <p>Installation et remplacement chauffe-eau</p></li>
+                        <li><FontAwesomeIcon className='check' icon={faCheck} /> <p>Installation et remplacement chauffe-eau thermodynamique</p></li>
+                        <li><FontAwesomeIcon className='check' icon={faCheck} /> <p>Installation de tuyauterie</p></li>
+                        <li><FontAwesomeIcon className='check' icon={faCheck} /> <p>Installation réseau plomberie neuf et rénovation</p></li>
+                        <li><FontAwesomeIcon className='check' icon={faCheck} /> <p>Remplacement wc</p></li>
                     </ul>
                 </div>
             </section>
@@ -59,13 +59,13 @@ function NotreSavoirFaire () {
                     <h2 className='section-text'>Chauffage à Thonon les bains: Votre partenaire de confiance</h2>
                     <p>Découvrez notre gamme complète de services de chauffage dédiés à votre confort. De l'installation à l'entretien, nous sommes votre partenaire de confiance pour créer un environnement chaleureux et confortable au sein de votre foyer.</p>
                     <ul>
-                        <li><FontAwesomeIcon className='check' icon={faCheck} /> Remplacement de radiateur</li>
-                        <li><FontAwesomeIcon className='check' icon={faCheck} /> Installation radiateur</li>
-                        <li><FontAwesomeIcon className='check' icon={faCheck} /> Installation plancher chauffant</li>
-                        <li><FontAwesomeIcon className='check' icon={faCheck} /> Remplacement vannes thermostatiques</li>
-                        <li><FontAwesomeIcon className='check' icon={faCheck} /> Réparation de chaudières</li>
-                        <li><FontAwesomeIcon className='check' icon={faCheck} /> Désembouage plancher chauffant</li>
-                        <li><FontAwesomeIcon className='check' icon={faCheck} /> Dépannage installation de chauffage</li>
+                        <li><FontAwesomeIcon className='check' icon={faCheck} /> <p>Remplacement de radiateur</p></li>
+                        <li><FontAwesomeIcon className='check' icon={faCheck} /> <p>Installation radiateur</p></li>
+                        <li><FontAwesomeIcon className='check' icon={faCheck} /> <p>Installation plancher chauffant</p></li>
+                        <li><FontAwesomeIcon className='check' icon={faCheck} /> <p>Remplacement vannes thermostatiques</p></li>
+                        <li><FontAwesomeIcon className='check' icon={faCheck} /> <p>Réparation de chaudières</p></li>
+                        <li><FontAwesomeIcon className='check' icon={faCheck} /> <p>Désembouage plancher chauffant</p></li>
+                        <li><FontAwesomeIcon className='check' icon={faCheck} /> <p>Dépannage installation de chauffage</p></li>
                     </ul>
                 </div>
             </section>
@@ -77,8 +77,8 @@ function NotreSavoirFaire () {
                     <h2 className='section-text'>Installation de pompe à chaleur à Thonon les Bains et dans le chablais</h2>
                     <p>Les pompes à chaleur sont l'avenir du chauffage écoénergétique. Chez DEMETRIO, nous sommes fiers de proposer des solutions de chauffage respectueuses de l'environnement pour un avenir plus durable.</p>
                     <ul>
-                        <li><FontAwesomeIcon className='check' icon={faCheck} />Installation de pompes à chaleur air-eau</li>
-                        <li><FontAwesomeIcon className='check' icon={faCheck} />Remplacement de chaudière fuel/gaz par pompe à chaleur</li>
+                        <li><FontAwesomeIcon className='check' icon={faCheck} /> <p>Installation de pompes à chaleur air-eau</p></li>
+                        <li><FontAwesomeIcon className='check' icon={faCheck} /> <p>Remplacement de chaudière fuel/gaz par pompe à chaleur</p></li>
                     </ul>
                 </div>
             </section>
