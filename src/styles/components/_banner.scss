@@ -16,6 +16,7 @@
         position: relative;
         left: 50px;
         bottom: 500px;
+        width: 80%;
         
         @include mobile {
             bottom: 270px;

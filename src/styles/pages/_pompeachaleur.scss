@@ -1,0 +1,75 @@
+.pac-img{
+    width: 40%;
+
+    @include mobile {
+        width: 100%;
+    }
+}
+
+#certification__section {
+    flex-direction: row-reverse;
+    align-items: center;
+
+    @include mobile {
+        padding-left: 20px;
+        flex-direction: column;
+    }
+
+    .savoirFaire-div{
+        padding-left: 0;
+
+
+    }
+
+}
+
+#installation__section {
+    flex-direction: column;
+    
+    @include mobile {
+        padding-left: 20px;
+    }
+
+    .savoirFaire-div{
+        padding: 0;
+    }
+}
+
+.installation__section-header {
+    display: flex;
+    flex-direction: row;
+
+    @include mobile {
+        flex-direction: column;
+    }
+}
+
+.installation__container {
+    margin-top: 50px;
+    
+    &-div{
+        margin-bottom: 50px;
+        p{
+            text-align: left;
+        }
+    }
+
+    &-img{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        img{
+            width: 60%;
+
+            @include mobile {
+               width: 90%;
+            }
+        }
+    }
+}
+
+
+
+
+

@@ -64,6 +64,15 @@
 .savoirFaire-card{
     .card-link{
         width: 30%;
+
+        @include mobile {
+            width: 70%;
+        }
+        .card {
+            @include mobile {
+                flex-direction: row;
+            }
+        }
         .card-span {
             border-radius: 50%;
             background-color: #a7d403;
@@ -77,6 +86,12 @@
             top: -35px;
             left: auto;
             font-size: 30px;
+
+            @include mobile{
+                top:0;
+                left:-30px;
+            }
+
         }
     }
 }

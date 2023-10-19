@@ -42,6 +42,14 @@
             background: none;
         }
 
+        .close-button {
+            top: 140px;
+            left: 20px;
+            z-index: 100;
+            background:$green;
+            color:$darkgreen
+            }
+        
         &__burger {
             display: none;
 

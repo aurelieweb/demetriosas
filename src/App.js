@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Accueil from './pages/Accueil';
 import NotreSavoirFaire from './pages/NotreSavoirFaire';
+import PompeAChaleur from './pages/PompeAChaleur';
 import NosRealisations from './pages/NosRealisations';
 import DevisEnLigne from './pages/DevisEnLigne';
 import Contact from './pages/Contact';
@@ -20,6 +21,9 @@ function App() {
 
           {/* Route de la page Notre Savoir-faire */}
           <Route path="/notre-savoir-faire" element={<NotreSavoirFaire className="notre-savoir-faire-page" />} />
+
+          {/* Route de la page Contact */}
+          <Route path="/pompes-a-chaleur" element={<PompeAChaleur className="pac-page" />} />
 
           {/* Route de la page Nos Prestations */}
           <Route path="/nos-realisations" element={<NosRealisations className="nos-realisations-page" />} />

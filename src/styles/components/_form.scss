@@ -16,10 +16,19 @@
     @include form;
     width: calc(100% - (40px));
 
+    @include mobile {
+        flex-direction: column;
+        align-items: center;
+    }
+
     &-group{
         display: flex;
         flex-direction: column;
         width: calc(50% - (10px));
+
+        @include mobile {
+            width: 100%;
+        }
 
         label {
             display: flex;
@@ -53,10 +62,19 @@
 .container__devis {
     display: flex;
 
+    @include mobile {
+        flex-direction: column;
+    }
+
     .devis__content {
       display: flex;
       flex-direction: column;
       margin: 0 50px;
+
+        @include mobile{
+            flex-direction: column-reverse;
+        }
+
       &-text {
         margin: 0;
           p {
@@ -73,6 +91,12 @@
         width: 50%;
         @include form;
         margin: 0 50px 0 0;
+        
+        @include mobile {
+            width: 100%;
+            margin: 0;
+            padding: 20px 0;
+        }
     }
     
     .devis__form {

@@ -7,7 +7,7 @@
     background-color: #002A3B;
     color: white;
     margin-top: 50px;
-    width: 100%;
+    width: calc(100% - 40px);
 
     &__media{
         display: flex;
