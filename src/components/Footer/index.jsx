@@ -14,7 +14,7 @@ function Footer() {
                 <span className='span-media'><a href='https://www.instagram.com/demetrio_cp/'><span className='sr-only'> aria-label='Instagram'</span> <FontAwesomeIcon icon={faInstagram} /></a></span>
                 <span className='span-media'><a href='https://fr.linkedin.com/company/demetrio'><span className='sr-only'> aria-label='Linkedin'</span> <FontAwesomeIcon icon={faLinkedinIn} /></a></span>
             </div>
-            <p>Copyright 2023. Designed by ADW</p>
+            <p>Copyright 2023. Designed by ad. L'agence Digitale</p>
         </footer>
     )
 }

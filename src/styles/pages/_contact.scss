@@ -19,7 +19,7 @@
 .contact__card {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /*justify-content: center;*/
     background-color: #002A3B;
     color: #a7d403;
     width: 30%;
@@ -27,6 +27,7 @@
     border-radius: 5px;
     min-width: 180px;
     font-size: 30px;
+    box-shadow: $box-shadow-card;
 
     @include mobile {
         flex-direction: row;
@@ -39,13 +40,20 @@
     &-title {
         display: none;
     }
-    p {
+    p, a {
         color: white;
         opacity: 1;
         font-size: 16px;
+        margin: 20px 0;
 
         @include mobile {
             margin-left: 50px;
         }
+    }
+
+    a{
+        text-decoration: none;
+        text-align: center;
+    
     }
 }

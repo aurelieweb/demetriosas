@@ -22,11 +22,12 @@
 .card {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /*align-items: center;*//*a rajouter sur card services*/
     background-color: #002A3B;
     color: #a7d403;
     border-radius: 10px;
     transition: transform 0.3s;
+    box-shadow: $box-shadow-card;
     &:hover{
         transform: scale(1.05);
         p{color: $blue;
@@ -35,12 +36,12 @@
 
     &__image {
         width: 100%;
-        height: 300px;
+        height: 150px;
         border-radius: 10px 10px 0 0;
         object-fit: cover;
 
         @include mobile {
-            height: 150px;
+            height: 150px;/*voir si chagement hauteur*/
             width: 300px;
         }
     }
@@ -69,6 +70,7 @@
             width: 70%;
         }
         .card {
+            align-items: center;
             @include mobile {
                 flex-direction: row;
             }
