@@ -19,3 +19,13 @@
         }
     }
 }
+
+.link-bold {
+    text-decoration: none;
+    font-weight: 800;
+    color: $darkgreen;
+
+    &:hover{
+        color: $blue;
+    }
+}

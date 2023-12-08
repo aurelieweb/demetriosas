@@ -1,70 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Banner from '../../components/Banner';
+import ContactForm from '../../components/ContactForm';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope, faLocationPin } from '@fortawesome/free-solid-svg-icons';
 
-// Expressions régulières pour la validation des champs
-const nameRegex = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+/;
-const phoneRegex = /^0[1-9]([-. ]?[0-9]{2}){4}/;
 
 function Contact() {
   const pageTitle = "Nous contacter";
-
-  const [formData, setFormData] = useState({
-    nom: '',
-    prenom: '',
-    email: '',
-    telephone: '',
-    objet: '',
-    message: '',
-  });
-
-  const [errors, setErrors] = useState({});
-
-  const handleFieldChange = (field, value) => {
-    setFormData({
-      ...formData,
-      [field]: value,
-    });
-  };
-
-  const validateInput = () => {
-    const newErrors = {};
-
-    if (!nameRegex.test(formData.nom)) {
-      newErrors.nom = 'Le nom est invalide';
-    }
-
-    if (!nameRegex.test(formData.prenom)) {
-      newErrors.prenom = 'Le prénom est invalide';
-    }
-
-    if (!emailRegex.test(formData.email)) {
-      newErrors.email = 'L\'email est invalide';
-    }
-
-    if (!phoneRegex.test(formData.telephone)) {
-      newErrors.telephone = 'Le numéro de téléphone est invalide';
-    }
-
-    setErrors(newErrors);
-
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    if (validateInput()) {
-      // Envoyer le formulaire
-      console.log('Formulaire soumis avec succès', formData);
-      // Ajoutez ici votre logique pour envoyer les données, par exemple avec emailjs
-
-    } else {
-      console.log('Validation a échoué. Le formulaire n\'a pas été soumis.');
-    }
-  };
 
   return (
     <div className='main'>
@@ -83,100 +25,23 @@ function Contact() {
         <div className="contact__container">
           <div className="contact__card">
             <h3 className='contact__card-title'>Adresse</h3>
-            <FontAwesomeIcon icon={faLocationPin} />
+            <FontAwesomeIcon icon={faLocationPin} className='contact__icon'/>
             <p>17, chemin des Troncs <br /> 74200 Allinges</p>
           </div>
           <div className="contact__card">
             <h3 className='contact__card-title'>Téléphone</h3>
-            <FontAwesomeIcon icon={faPhone} />
+            <FontAwesomeIcon icon={faPhone} className='contact__icon'/>
             <a href="tel:+33457437544">04 57 43 75 44</a>
           </div>
           <div className="contact__card">
             <h3 className='contact__card-title'>E-mail</h3>
-            <FontAwesomeIcon icon={faEnvelope} />
+            <FontAwesomeIcon icon={faEnvelope} className='contact__icon'/>
             <a href="mailto:contact@demetrio.fr">contact@demetrio.fr</a>
           </div>
         </div>
       </section>
       <section id='form__section'>
-        <div className="contact__form">
-          <h2>Contactez-nous</h2>
-          <form className='form' onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label htmlFor="nom">Nom :</label>
-              <input
-                type="text"
-                id="nom"
-                className="form-control"
-                value={formData.nom}
-                onChange={(e) => handleFieldChange('nom', e.target.value)}
-                required
-              />
-              {errors.nom && <div className="error-message">{errors.nom}</div>}
-            </div>
-            <div className="form-group">
-              <label htmlFor="prenom">Prénom :</label>
-              <input
-                type="text"
-                id="prenom"
-                className="form-control"
-                value={formData.prenom}
-                onChange={(e) => handleFieldChange('prenom', e.target.value)}
-                required
-              />
-              {errors.prenom && <div className="error-message">{errors.prenom}</div>}
-            </div>
-            <div className="form-group">
-              <label htmlFor="email">E-mail :</label>
-              <input
-                type="email"
-                id="email"
-                className="form-control"
-                value={formData.email}
-                onChange={(e) => handleFieldChange('email', e.target.value)}
-                required
-              />
-              {errors.email && <div className="error-message">{errors.email}</div>}
-            </div>
-            <div className="form-group">
-              <label htmlFor="telephone">Numéro de téléphone :</label>
-              <input
-                type="tel"
-                id="telephone"
-                className="form-control"
-                value={formData.telephone}
-                onChange={(e) => handleFieldChange('telephone', e.target.value)}
-                required
-              />
-              {errors.telephone && <div className="error-message">{errors.telephone}</div>}
-            </div>
-            <div className="form-group form-style">
-              <label htmlFor="objet">Objet :</label>
-              <input
-                type="text"
-                id="objet"
-                className="form-control"
-                value={formData.objet}
-                onChange={(e) => handleFieldChange('objet', e.target.value)}
-                required
-              />
-            </div>
-            <div className="form-group form-style">
-              <label htmlFor="message">Message :</label>
-              <textarea
-                id="message"
-                rows="4"
-                className="form-control"
-                value={formData.message}
-                onChange={(e) => handleFieldChange('message', e.target.value)}
-                required
-              ></textarea>
-            </div>
-            <button className="form__button" type="submit">
-              Envoyer
-            </button>
-          </form>
-        </div>
+        <ContactForm/>
       </section>
     </div>
   );

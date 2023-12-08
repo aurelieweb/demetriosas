@@ -38,7 +38,7 @@ function Accueil() {
             </section>
             <section>
                 <h2>Fiabilité et performance :<br />  Nos marques de références</h2>
-                <p className='section-text'>Chaque marque que nous proposons est une garantie de qualité, de durabilité et de performances supérieures dans le domaine de la plomberie, du chauffage et des pompes à chaleur.</p>
+                <p className='section-text'>Chaque marque que nous proposons est une garantie de qualité, de durabilité et de performances supérieures dans le domaine de la plomberie, du chauffage et des pompes à chaleur. En tant qu'experts passionnés, nous sommes fiers d'être ambassadeurs de la marque <a href='https://mon-installateur.atlantic.fr/Societe/DEMETRIO' className='link-bold'> Atlantic</a>, renommée pour son engagement envers l'innovation et le développement de solutions durables.</p>
                 <div className='container__label'>
                     <a href='https://www.atlantic.fr/' className='label' ><img src={LogoAtlantic} alt='Demetrio, installateur Atlantic'/></a>
                     <a href='https://www.thermor.fr/' className='label'><img src={LogoThermor} alt='Demetrio, installateur Thermor'/></a>

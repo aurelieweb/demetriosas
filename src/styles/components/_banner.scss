@@ -34,6 +34,32 @@
             @include mobile{
                 font-size: 36px;
             }
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+        h1 {
+            text-align: left;
+            font-size: 36px;
+            color: #002A3B;
+            opacity: 0; /* Initial opacity set to 0 */
+            font-weight: bold;
+
+            @include mobile {
+                font-size: 20px;
+            }
+
+            /* Animation CSS pour le fondu */
+            animation: fadeIn 1.5s ease-in-out forwards;
+            animation-delay: 0.5s; /* 1.5s est la durée de l'animation, ajustez selon vos besoins */
+        }
+
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
 
     }

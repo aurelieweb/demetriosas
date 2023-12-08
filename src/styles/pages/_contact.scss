@@ -28,6 +28,10 @@
     min-width: 180px;
     font-size: 30px;
     box-shadow: $box-shadow-card;
+    transition: transform 0.3s;
+    &:hover{
+        transform: scale(1.05);
+    }
 
     @include mobile {
         flex-direction: row;

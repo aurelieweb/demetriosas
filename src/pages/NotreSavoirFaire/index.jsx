@@ -1,11 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Banner from '../../components/Banner';
 import Card from '../../components/Card';
+import Button from '../../components/Button';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faFaucet, faThermometer, faHome } from '@fortawesome/free-solid-svg-icons';
 
-import Imgplomberie from '../../assets/imgSdb.jpeg';
+import Imgplomberie from '../../assets/imgSdb.jpg';
 import Imgchauffage from '../../assets/imgChauffage.jpg';
 import Imgpac from '../../assets/imgPac.jpg';
 
@@ -80,6 +82,7 @@ function NotreSavoirFaire () {
                         <li><FontAwesomeIcon className='check' icon={faCheck} /> <p>Installation de pompes à chaleur air-eau</p></li>
                         <li><FontAwesomeIcon className='check' icon={faCheck} /> <p>Remplacement de chaudière fuel/gaz par pompe à chaleur</p></li>
                     </ul>
+                    <Link to="/pompes-a-chaleur#pac__section"><Button text={"+ d'info"}/></Link>
                 </div>
             </section>
             

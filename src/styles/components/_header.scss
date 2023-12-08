@@ -3,12 +3,12 @@
     margin-bottom: 0;
 
     &__contact{
-        margin: 10px 50px;
+        margin: 10px 20px;
         display: flex;
-        flex-direction: row;
+        flex-direction: row-reverse;
         justify-content: space-between;
 
-        @include mobile {
+        @include tablet {
             width: 100%;
             background-color: $darkgreen;
             margin: 0;
@@ -19,7 +19,7 @@
             justify-content: space-between;
             gap: 20px;
 
-            @include mobile {
+            @include tablet {
                 flex-direction: column;
                 align-items: flex-start;
                 padding: 10px;
@@ -32,7 +32,7 @@
                 align-items: center;
                 text-decoration: none;
                 display: flex;
-                color: #002A3B;
+                color: $darkgreen;
                 gap: 10px;
 
                 &:hover {
@@ -40,7 +40,7 @@
                     transform: scale(1.10);
                 }
 
-                @include mobile {
+                @include tablet {
                     color: $green;
                 }
             }
@@ -52,7 +52,7 @@
             align-items: center;
             gap: 20px;
 
-            @include mobile {
+            @include tablet {
                 justify-content: flex-end;
                 padding: 10px;
                 align-items: flex-start;
@@ -62,7 +62,7 @@
                 color: $darkgreen;
                 transition: transform 0.3s;
 
-                @include mobile {
+                @include tablet {
                     color: $green;
                 }
 

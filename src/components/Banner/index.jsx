@@ -12,7 +12,7 @@ function Banner({ pageTitle }) {
         <p>DEMETRIO</p>
         <h1>{pageTitle}</h1>
         <Link to='/devis-en-ligne#devis__form-anchor'>
-          <Button text="Devis en ligne" />
+          <Button id="bannerButton" text="Devis en ligne" />
         </Link>
       </div>
     </div>

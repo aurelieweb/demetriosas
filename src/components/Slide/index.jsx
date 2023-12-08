@@ -41,10 +41,10 @@ function Slide() {
             </>
           ) : (
             <>
-              <p>Nous privilégions des fournisseurs français et européens, marquant ainsi notre engagement envers l’environnement et l’économie locale.</p>
-              <p>Chaque installation est pensée pour allier efficacité énergétique et réduction des émissions de carbone, contribuant ainsi à un avenir plus durable.</p>
-              <p>Notre équipe expérimentée est fière de concevoir des solutions durables et performantes avec un service après-vente fiable, garantissant votre tranquillité d’esprit à chaque étape.</p>
-              <p>Ensemble, créons un avenir plus éthique et plus confortable.</p>
+              <p>Engagé pour un avenir durable, nous privilégions des fournisseurs français et européens, marquant ainsi notre engagement envers l’environnement et l’économie locale. Chaque installation que nous réalisons est pensée pour allier efficacité énergétique et réduction des émissions de carbone, contribuant ainsi à un avenir plus durable</p>
+              <p>Notre équipe expérimentée combine compétences techniques et conscience environnementale pour concevoir des solutions durables et performantes. Nous assurons un service après-vente fiable, garantissant votre tranquillité d’esprit à chaque étape.</p>
+              <p>Explorez nos solutions complètes en plomberie, chauffage et pompe à chaleur. Ensemble, créons un avenir plus éthique et plus confortable.</p>
+
             </>
           )}
         </div>

@@ -15,7 +15,7 @@
     &__item{
         list-style: none;
         display: flex;
-        padding: 0 10px;
+        padding: 0 8px;
         align-items: center;
         justify-content: center;
         width: auto;
@@ -38,7 +38,7 @@
 .header {
     .menu{
 
-        @include mobile{
+        @include tablet{
             background: none;
         }
 
@@ -53,7 +53,7 @@
         &__burger {
             display: none;
 
-            @include mobile{
+            @include tablet{
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -70,7 +70,7 @@
 
         &__list{
 
-            @include mobile {
+            @include tablet {
                 list-style: none;
                 padding: 0;
                 margin: 0;
@@ -97,19 +97,19 @@
 
         &__item{
 
-            @include mobile {
+            @include tablet {
                 height: 30px;
             }
 
             &:hover {
-                @include mobile {
+                @include tablet {
                     border-bottom: none;
                 }
             }
             
             &-link{
 
-                @include mobile {
+                @include tablet {
                     background: none;
                     color: $blue;
                 }
