@@ -22,7 +22,6 @@
 .card {
     display: flex;
     flex-direction: column;
-    /*align-items: center;*//*a rajouter sur card services*/
     background-color: #002A3B;
     color: #a7d403;
     border-radius: 10px;
@@ -41,7 +40,7 @@
         object-fit: cover;
 
         @include mobile {
-            height: 150px;/*voir si chagement hauteur*/
+            height: 150px;
             width: 300px;
         }
     }

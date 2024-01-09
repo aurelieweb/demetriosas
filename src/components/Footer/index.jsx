@@ -5,6 +5,8 @@ import Menu from '../Menu';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
+
+//Fonction Footer
 function Footer() {
     return (
         <footer className='footer'>

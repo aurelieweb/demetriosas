@@ -28,7 +28,7 @@ function Header() {
         <Link to="/">
           <img className="logo" src={logo} alt="Logo Demetrio, expert plomberie, chauffage et pompe à chaleur" />
         </Link>
-        <Menu /> {/* Utilisez le composant de menu ici */}
+        <Menu /> 
       </nav>
     </header>
   );

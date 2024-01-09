@@ -4,12 +4,12 @@ import imgError from '../../assets/imgError.png';
 
 
 
-function Maintenance() {
+function Error() {
   return (
-    <div className='maintenance__div'>
-      <img className="maintenance__div-img" src={imgError} alt="Page en cours de maintenance" />
+    <div className='error__div'>
+      <img className="error__div-img" src={imgError} alt="Erreur 404" />
     </div>
   );
 }
 
-export default Maintenance;
+export default Error;

@@ -6,6 +6,7 @@ const nameRegex = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+/;
 const phoneRegex = /^0[1-9]([-. ]?[0-9]{2}){4}/;
 
+//Parametre contact
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     nom: '',
@@ -29,7 +30,7 @@ const ContactForm = () => {
   const validateInput = () => {
     const newErrors = {};
 
-    // ... (votre logique de validation)
+    // Logique de validation
     if (!nameRegex.test(formData.nom)) {
         newErrors.nom = 'Le nom est invalide';
       }
@@ -56,7 +57,7 @@ const ContactForm = () => {
 
     if (validateInput()) {
         console.log('Formulaire soumis avec succès', formData);
-        // Ajoutez ici votre logique pour envoyer les données, par exemple avec emailjs
+//Envoi mail
         sendEmail();
         setIsSubmitted(true);
     } else {
@@ -74,14 +75,11 @@ const sendEmail = () => {
       message: formData.message || 'N/A',
     };
 
-    // Envoi de la demande par mail
-    // ...
+// Envoi de la demande par mail
 const emailUserId = process.env.REACT_APP_EMAILJS_USERID;
 const emailService = process.env.REACT_APP_EMAILJS_SERVICE;
 const emailTemplateContact = process.env.REACT_APP_EMAILJS_TEMPLATE_CONTACT;
-// ...
 
-  //A modifier dans .env;
     
     emailjs.send(emailService, emailTemplateContact, emailParams, emailUserId)
       .then((response) => {

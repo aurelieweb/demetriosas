@@ -4,6 +4,7 @@ import '../../styles/styles.scss';
 import bannerImg from '../../assets/imgBanner.jpg';
 import Button from '../Button';
 
+/*Fonction Banner*/ 
 function Banner({ pageTitle }) {
   return (
     <div className="banner">

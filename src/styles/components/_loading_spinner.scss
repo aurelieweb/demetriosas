@@ -11,31 +11,36 @@
     width: 100vw;
     z-index: 999;
 }
-    @keyframes animateBg {
-        0% {
-            filter: hue-rotate(0deg);
-            visibility: visible;
-        }
-        99.9% {
-            filter: hue-rotate(-90deg);
-        }
-        100% {
-            visibility: hidden;
-        }
+
+   
+@keyframes animateBg {
+    0% {
+        filter: hue-rotate(0deg);
+        visibility: visible;
     }
-    .loader {
-        position: relative;
-        width: 120px;
-        height: 120px;
-        span {
-            position: absolute;
-            top: 0%;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            transform: rotate(calc(18deg * var(--i)));
-        }
-    }   
+    99.9% {
+           filter: hue-rotate(-90deg);
+    }
+    100% {
+        visibility: hidden;
+    }
+}
+
+.loader {
+    position: relative;
+    width: 120px;
+    height: 120px;
+
+    span {
+        position: absolute;
+        top: 0%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: rotate(calc(18deg * var(--i)));
+    }
+}  
+
 .loader span::before {
     content: "";
     position: absolute;
@@ -55,6 +60,7 @@
     animation-fill-mode: forwards;
     animation-delay: calc(0.1s * var(--i)); 
 }
+
 @keyframes animate {
     0% {
         transform: scale(1);

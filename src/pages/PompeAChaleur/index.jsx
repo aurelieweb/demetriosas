@@ -5,6 +5,7 @@ import ImgQualipac from '../../assets/imgRGE.jpeg';
 import ImgAide from '../../assets/imgPac.png';
 import ImgChauffage from '../../assets/imgConfortChauffage.jpg';
 
+/*Fonction Pompe à chaleur*/
 function PompeAChaleur() {
   const pageTitle = "Pompe à Chaleur : Demetrio Installateur Expert Certifié RGE à Thonon";
 
@@ -12,29 +13,27 @@ function PompeAChaleur() {
     <div className='main'>
       <Banner pageTitle={pageTitle} />
       <section id="pac__section" className='savoirFaire-section'>
-      <img className="pac-img" src={ImgPac} alt="Installation Pac Thonon, Chablais" />
-      <div className='savoirFaire-div'>
-        <h2 className='section-text'>La Pompe à Chaleur : Une Solution Moderne et Écologique</h2>
-        <div className='pac__div'>
-          <p className='pac__div-text'>
-            Les pompes à chaleur représentent une solution moderne et écologique pour le chauffage de votre maison. Les pompes à chaleur sont reconnues pour leur efficacité énergétique, leur respect de l'environnement et leurs économies d'énergie. De plus, elles offrent un chauffage performant en hiver et peuvent également assurer une climatisation efficace en été. Elles améliorent le confort intérieur en offrant un chauffage homogène tout en éliminant la nécessité de stocker des combustibles. De plus, les pompes à chaleur contribuent à réduire votre empreinte carbone, ce qui est essentiel dans notre société axée sur la durabilité.
-          </p>
-
-        </div>
-        </div>
+        <img className="pac-img" src={ImgPac} alt="Installation Pac Thonon, Chablais" />
+        <div className='savoirFaire-div'>
+          <h2 className='section-text'>La Pompe à Chaleur : Une Solution Moderne et Écologique</h2>
+          <div className='pac__div'>
+            <p className='pac__div-text'>
+              Les pompes à chaleur représentent une solution moderne et écologique pour le chauffage de votre maison. Les pompes à chaleur sont reconnues pour leur efficacité énergétique, leur respect de l'environnement et leurs économies d'énergie. De plus, elles offrent un chauffage performant en hiver et peuvent également assurer une climatisation efficace en été. Elles améliorent le confort intérieur en offrant un chauffage homogène tout en éliminant la nécessité de stocker des combustibles. De plus, les pompes à chaleur contribuent à réduire votre empreinte carbone, ce qui est essentiel dans notre société axée sur la durabilité.
+            </p>
+          </div>
+          </div>
       </section>
 
       <section className='savoirFaire-section' id='certification__section'>
-      <a href='https://www.qualit-enr.org/entreprises/demetrio/' className='pac-lien'><img className="pac-img-test" src={ImgQualipac} alt="Demetrio, certifié RGE Qualipac Thonon" /></a>
-      <div className='savoirFaire-div'>
-        <h2 className='section-text'>La Certification RGE et QualiPAC</h2>
-        <div className='pac-div'>
-        <p className='pac__div-text'>L'entreprise Demetrio détient fièrement la certification <strong>QualiPAC</strong>, délivrée par l'organisme <strong>Qualit’EnR</strong>, en reconnaissance de notre savoir-faire et de notre expertise.</p>
-        <p className='pac__div-text'> Nous sommes également labellisés <strong>RGE</strong>, ce qui signifie "Reconnu Garant de l'Environnement". Cette mention, décernée par les pouvoirs publics et l'Ademe, est un <strong>critère essentiel pour être éligible aux aides gouvernementales</strong> telles que l'Eco-PTZ ou le Crédit d'Impôt pour la Transition Énergétique.</p>
-        <p className='pac__div-text'> Les professionnels RGE QualiPAC se démarquent par leur expertise dans le domaine des pompes à chaleur.</p>
-
-        </div>
-        </div>
+        <a href='https://www.qualit-enr.org/entreprises/demetrio/' className='pac-lien'><img className="pac-img-test" src={ImgQualipac} alt="Demetrio, certifié RGE Qualipac Thonon" /></a>
+        <div className='savoirFaire-div'>
+          <h2 className='section-text'>La Certification RGE et QualiPAC</h2>
+          <div className='pac-div'>
+            <p className='pac__div-text'>L'entreprise Demetrio détient fièrement la certification <strong>QualiPAC</strong>, délivrée par l'organisme <strong>Qualit’EnR</strong>, en reconnaissance de notre savoir-faire et de notre expertise.</p>
+            <p className='pac__div-text'> Nous sommes également labellisés <strong>RGE</strong>, ce qui signifie "Reconnu Garant de l'Environnement". Cette mention, décernée par les pouvoirs publics et l'Ademe, est un <strong>critère essentiel pour être éligible aux aides gouvernementales</strong> telles que l'Eco-PTZ ou le Crédit d'Impôt pour la Transition Énergétique.</p>
+            <p className='pac__div-text'> Les professionnels RGE QualiPAC se démarquent par leur expertise dans le domaine des pompes à chaleur.</p>
+          </div>
+          </div>
       </section>
 
       <section className='savoirFaire-section' id='installation__section'>

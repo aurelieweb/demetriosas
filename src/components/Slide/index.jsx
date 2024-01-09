@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../../styles/styles.scss';
 import ImgSlide from '../../assets/imgTeam.jpeg';
 
+//Fonction slide
 function Slide() {
   const [selectedTab, setSelectedTab] = useState('histoire');
 
