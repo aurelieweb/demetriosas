@@ -15,7 +15,14 @@
     width: 100%;
 }
 
-#certification__section {
+#pac__section{
+    .savoirFaire-div{
+        padding-left: 20px;
+        width: 60%;
+    }
+}
+
+#certification__section{
     flex-direction: row-reverse;
     align-items: center;
 
@@ -46,12 +53,19 @@
 
     .savoirFaire-div{
         padding-left: 20px;
+        width: 60%;
 
         @include mobile{
             padding: 0;
             width: 100%;
         }
 }
+}
+
+#process__section{
+    .savoirFaire-div{
+        width: 60%;
+    }
 }
 
 .installation__section-header {

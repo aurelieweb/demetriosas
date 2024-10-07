@@ -7,9 +7,8 @@ import PompeAChaleur from './pages/PompeAChaleur';
 import NosRealisations from './pages/NosRealisations';
 import DevisEnLigne from './pages/DevisEnLigne';
 import Contact from './pages/Contact';
+import Error from './components/ErrorPage';
 
-/*import Error from './components/Error';*/
-/*import './styles/styles.scss';*/
 
 function App() {
   return (
@@ -34,8 +33,8 @@ function App() {
           {/* Route de la page Contact */}
           <Route path="/contact" element={<Contact className="contact-page" />} />
 
-          {/* Route par défaut pour la page d'erreur 
-          <Route path="*" element={<Error />} />*/}
+          {/* Route par défaut pour la page d'erreur */}
+          <Route path="*" element={<Error />} />
         </Routes>
       </Layout>
     </Router>
