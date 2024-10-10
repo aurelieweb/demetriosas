@@ -5,12 +5,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope, faLocationPin } from '@fortawesome/free-solid-svg-icons';
 
 
+
+const buttons = [
+  { text: 'Demande d\'intervention', link: '/devis-en-ligne' },
+];
+
+
 function Contact() {
   const pageTitle = "Nous contacter";
 
   return (
     <div className='main'>
-      <Banner pageTitle={pageTitle} />
+      <Banner 
+        pageTitle={pageTitle}
+        buttons={buttons} 
+      />
       <div className="google-map-container">
         <iframe
           title="Adresse sur Google Maps"

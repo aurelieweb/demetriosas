@@ -3,13 +3,20 @@ import Banner from '../../components/Banner';
 /*import Gallery from '../../components/Gallery';*/
 import MaintenancePage from '../../components/MaintenancePage';
 
+const buttons = [
+    { text: 'Demande d\'intervention', link: '/devis-en-ligne' },
+  ];
+
 function NosRealisations() {
 
     const pageTitle = "Expert plomberie, Chauffage et Pompe à chaleur à Thonon";
 
     return (
         <div className='main'>
-            <Banner pageTitle={pageTitle}/>
+            <Banner 
+                pageTitle={pageTitle}
+                buttons={buttons} 
+            />
             <section className='gallery__section'>
                 <h2>Découvrez Nos Réalisations en Plomberie, Chauffage et Pompes à Chaleur</h2>
                 {/*<p className='section-text'>

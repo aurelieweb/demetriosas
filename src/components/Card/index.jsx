@@ -2,7 +2,7 @@ import React from 'react';
 import { useLocation } from 'react-router-dom'; 
 import { HashLink as Link } from 'react-router-hash-link';// Importez useLocation pour obtenir la route actuelle
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFaucet, faThermometer, faHome } from '@fortawesome/free-solid-svg-icons';
+import { faFaucet, faTemperatureHalf, faSeedling  } from '@fortawesome/free-solid-svg-icons';
 import '../../styles/styles.scss';
 
 /*Fonction card*/
@@ -21,8 +21,8 @@ function Card({ serviceName, serviceSection, imageUrl }) {
           serviceSection === 'plomberie'
             ? faFaucet
             : serviceSection === 'chauffage'
-            ? faThermometer
-            : faHome 
+            ? faTemperatureHalf
+            : faSeedling
         }
       />
     )

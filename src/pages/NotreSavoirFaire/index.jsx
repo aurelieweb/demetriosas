@@ -5,12 +5,16 @@ import Card from '../../components/Card';
 import Button from '../../components/Button';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck, faFaucet, faThermometer, faHome } from '@fortawesome/free-solid-svg-icons';
+import { faCheck, faFaucet, faTemperatureHalf, faSeedling } from '@fortawesome/free-solid-svg-icons';
 
 import Imgplomberie from '../../assets/imgSdb.jpg';
 import Imgchauffage from '../../assets/imgChauffage.jpg';
 import Imgpac from '../../assets/imgPac.jpg';
 
+
+const buttons = [
+    { text: 'Demande d\'intervention', link: '/devis-en-ligne' },
+  ];
 
 
 function NotreSavoirFaire () {
@@ -23,14 +27,17 @@ function NotreSavoirFaire () {
 
     return (
         <div className='main'>
-            <Banner pageTitle={pageTitle}/>
+            <Banner 
+                pageTitle={pageTitle}
+                buttons={buttons} 
+            />
             <section>
                 <h2>Découvrez Nos Services Expert en Plomberie, Chauffage et Pompes à Chaleur</h2>
                 <p className='section-text'>Notre  expertise s'étend sur trois domaines essentiels : la plomberie, le chauffage et les pompes à chaleur. Nous sommes fiers de mettre notre savoir-faire à votre service pour répondre à vos besoins en matière de confort et de performance, que ce soit dans le cadre de la construction neuve ou de la rénovation. Notre équipe expérimentée est là pour vous accompagner tout au long de vos projets, en vous offrant des solutions sur mesure.</p>
                 <div className='container__card savoirFaire-card'>
                     <Card serviceName="Plomberie" serviceSection={plomberie} icon={<FontAwesomeIcon icon={faFaucet} />} />
-                    <Card serviceName="Chauffage" serviceSection={chauffage} icon={<FontAwesomeIcon icon={faThermometer}/>} />
-                    <Card serviceName="Pompe à chaleur" serviceSection={pac} icon={<FontAwesomeIcon icon={faHome} />} />
+                    <Card serviceName="Chauffage" serviceSection={chauffage} icon={<FontAwesomeIcon icon={faTemperatureHalf}/>} />
+                    <Card serviceName="Pompe à chaleur" serviceSection={pac} icon={<FontAwesomeIcon icon={faSeedling} />} />
                 </div>
             
             </section>

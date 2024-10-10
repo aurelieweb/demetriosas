@@ -6,6 +6,10 @@ import ImgQualipac from '../../assets/imgRGE.jpeg';
 import ImgAide from '../../assets/imgPac.png';
 import ImgChauffage from '../../assets/imgConfortChauffage.jpg';
 
+const buttons = [
+  { text: 'Demande de devis', link: '/devis-en-ligne' },
+];
+
 /* Fonction Pompe à chaleur */
 function PompeAChaleur() {
   const pageTitle = "Pompe à Chaleur : Demetrio Installateur Expert Certifié RGE à Thonon";
@@ -24,7 +28,10 @@ function PompeAChaleur() {
 
   return (
     <div className='main'>
-      <Banner pageTitle={pageTitle} />
+      <Banner 
+        pageTitle={pageTitle}
+        buttons={buttons} 
+      />
         <section id="pac__section" className='savoirFaire-section'>
           <img className="pac-img" src={ImgPac} alt="Installation Pac Thonon, Chablais" />
           <div className='savoirFaire-div'>

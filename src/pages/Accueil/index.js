@@ -1,4 +1,5 @@
 import React from 'react';
+/*import { Link } from 'react-router-dom';*/
 import Banner from '../../components/Banner';
 import Slide from '../../components/Slide';
 import Card from '../../components/Card';
@@ -11,6 +12,10 @@ import LogoCedeo from '../../assets/logo-cedeo.png';
 import LogoGrohe from '../../assets/logo-grohe.svg';
 import LogoHansgrohe from '../../assets/logo-hansgrohe.png';
 
+const buttons = [
+    { text: 'Demande d\'intervention', link: '/devis-en-ligne' },
+  ];
+
 function Accueil() {
 
     const pageTitle = "Expert plomberie, Chauffage et Pompe à chaleur à Thonon";
@@ -21,7 +26,10 @@ function Accueil() {
     
     return (
         <div className='main'>
-            <Banner pageTitle={pageTitle}/>
+            <Banner 
+                pageTitle={pageTitle}
+                buttons={buttons} 
+            />
             <section>
                 <h2>Plomberie, Chauffage et Pompe à chaleur :<br /> Notre savoir-faire</h2>
                 <p className='section-text'>Du Savoir-faire artisanal à l’innovation moderne, découvrez comment nous rédéfinissons votre confort</p>

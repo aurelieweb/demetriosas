@@ -3,6 +3,10 @@ import Banner from '../../components/Banner';
 import DevisForm from'../../components/DevisForm';
 import ImgDevis from '../../assets/imgDevis.jpg';
 
+const buttons = [
+  { text: 'En savoir plus', link: '/notre-savoir-faire' },
+];
+
 function Devis() {
 
     const pageTitle = "Devis en Ligne Plomberie, Chauffage et Pompe à Chaleur à Thonon";
@@ -30,7 +34,10 @@ function Devis() {
 
     return (
         <div className='main'>
-          <Banner pageTitle={pageTitle}/>
+          <Banner 
+                pageTitle={pageTitle}
+                buttons={buttons} 
+            />
           <section>
             <h2>Devis en ligne : Simple, Rapide et Efficace</h2>
             <p className='section-text'>Obtenez votre devis personnalisé en ligne pour vos projets de Plomberie, Chauffage et Pompes à Chaleur en quelques clics par des experts certifiés RGE QualiPAC</p>

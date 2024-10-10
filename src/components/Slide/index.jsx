@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../../styles/styles.scss';
-import ImgSlide from '../../assets/imgTeam.jpeg';
+import ImgSlide from '../../assets/imgTeam.jpg';
 
 //Fonction slide
 function Slide() {

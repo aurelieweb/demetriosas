@@ -36,6 +36,16 @@ button {
         box-shadow: $box-shadows-hover;
     } 
 }
+
+/*Style Banner Button*/
+
+.banner__buttons{
+    margin-top: 50px;
+
+    @include mobile {
+        margin-top: 20px;
+    }
+}
   
   /* Style pour le bouton "Valider" */
 
