@@ -4,26 +4,26 @@
     justify-content: space-between;
     align-items: flex-start;
 
+    @include mobile{
+      align-items: center;
+    }
+
     h2{
       margin: 0 50px;
     }
-  
-    @include mobile {
-      flex-direction: column-reverse;
-    }
-    
   }
     .faq__container {
       margin: 50px;
       display: flex;
       flex-direction: column;
-      align-items: center;
-  
+      width: 80%;
       border-radius: 10px;
     
       @include mobile{
+
+        margin-top: 30px;
         width: 90%;
-        margin-top: 0;
+
       }
     }
       
@@ -34,13 +34,14 @@
         justify-content: center;
         align-items: flex-start;
         width: 100%;
-        margin: 20px;
+        margin: 20px 0;
         color: $green;
         border-radius: 5px;
         background: $darkgreen;
   
         @include mobile{
           margin: 20px 0;
+          height: 100px;
         }
   
   

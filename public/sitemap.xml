@@ -2,35 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://demetrio.fr/</loc>
-    <lastmod>2024-01-09</lastmod>
+    <lastmod>2024-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://demetrio.fr/notre-savoir-faire</loc>
-    <lastmod>2024-01-09</lastmod>
+    <lastmod>2024-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://demetrio.fr/pompes-a-chaleur</loc>
-    <lastmod>2024-01-09</lastmod>
+    <lastmod>2024-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://demetrio.fr/nos-realisations</loc>
-    <lastmod>2024-01-09</lastmod>
+    <lastmod>2024-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://demetrio.fr/devis-en-ligne</loc>
-    <lastmod>2024-01-09</lastmod>
+    <lastmod>2024-10-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://demetrio.fr/contact</loc>
-    <lastmod>2024-01-09</last>
+    <lastmod>2024-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
+
 

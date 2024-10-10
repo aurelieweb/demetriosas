@@ -95,7 +95,7 @@ function PompeAChaleur() {
           {/* Button to open the Tally form */}
           <button className="download-guide-button" onClick={openTallyForm}>
                 Télécharger notre guide
-              </button>
+          </button>
         </div>
         <div className='installation__container-img'>
               <img className="rge" src={ImgAide} alt="Demetrio, installateur agréé Ma prime renov, cee, rge à Thonon" />
