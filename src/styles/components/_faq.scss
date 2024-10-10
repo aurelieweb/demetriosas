@@ -2,18 +2,19 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    width: 80%;
+    align-items: flex-start;
+
+    h2{
+      margin: 0 50px;
+    }
   
     @include mobile {
       flex-direction: column-reverse;
-      width: 90%;
     }
     
   }
     .faq__container {
-      margin-top: 50px;
-      width: 100%;
+      margin: 50px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -21,7 +22,7 @@
       border-radius: 10px;
     
       @include mobile{
-        width: 100%;
+        width: 90%;
         margin-top: 0;
       }
     }

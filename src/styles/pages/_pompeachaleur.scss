@@ -1,6 +1,6 @@
 /*Style page Pompe à chaleur*/
 .pac-img{
-    width: 40%;
+    width: 60%;
 
     @include mobile {
         width: 100%;
@@ -18,7 +18,7 @@
 #pac__section{
     .savoirFaire-div{
         padding-left: 20px;
-        width: 60%;
+        max-width: 40%;
     }
 }
 
@@ -34,7 +34,7 @@
 
     .savoirFaire-div{
         padding-left: 0;
-        width: 60%;
+        max-width: 60%;
 
         @include mobile{
             width: auto;
@@ -53,7 +53,7 @@
 
     .savoirFaire-div{
         padding-left: 20px;
-        width: 60%;
+        //width: 40%;
 
         @include mobile{
             padding: 0;
@@ -63,14 +63,29 @@
 }
 
 #process__section{
+    flex-direction: column;
+    background: $darkgreen;
+    padding: 50px;
     .savoirFaire-div{
-        width: 60%;
+        color: white;
+        width: 100%;
+        margin-bottom: 50px;
+
+        h2{
+            color: white;
+        }
+    }
+}
+
+#operation__section{
+    .savoirFaire-div{
+        max-width: 40%;
     }
 }
 
 .installation__section-header {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
 
     @include mobile {
         flex-direction: column;
@@ -91,6 +106,7 @@
         width: 100%;
         display: flex;
         justify-content: center;
+        background: $darkgreen;
 
         img{
             width: 60%;
@@ -100,6 +116,10 @@
             }
         }
     }
+}
+
+.video-wrapper{
+    width: 60%;
 }
 
 
