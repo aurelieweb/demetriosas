@@ -7,6 +7,7 @@ import PompeAChaleur from './pages/PompeAChaleur';
 import NosRealisations from './pages/NosRealisations';
 import DevisEnLigne from './pages/DevisEnLigne';
 import Contact from './pages/Contact';
+import Plomberie from './pages/Plomberie';
 import Error from './components/ErrorPage';
 
 
@@ -23,6 +24,9 @@ function App() {
 
           {/* Route de la page Contact */}
           <Route path="/pompes-a-chaleur" element={<PompeAChaleur className="pac-page" />} />
+
+          {/* Route de la page Plomberie */}
+          <Route path="/plomberie" element={<Plomberie className="plomberie-page" />} />
 
           {/* Route de la page Nos Prestations */}
           <Route path="/nos-realisations" element={<NosRealisations className="nos-realisations-page" />} />

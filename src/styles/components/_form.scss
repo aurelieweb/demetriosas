@@ -20,6 +20,7 @@
     }
 }
 .form {
+    flex-direction: column;
     @include form;
     width: calc(100% - (40px));
 
@@ -141,6 +142,9 @@
             label {
                 margin-bottom: 8px;
                 opacity: 0.7;
+                select {
+                    height: 40px;
+                }
             }
         }
         &-title  {
@@ -166,4 +170,8 @@
   align-items: center;
   color: $green;
   padding: 20px;
+}
+
+#question-1, #question-2, #question-3 {
+    height: 30px;
 }

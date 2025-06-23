@@ -221,7 +221,51 @@ function DevisForm({ questions }) {
     
     if (validateInput()) {
       console.log('Formulaire soumis avec succès');
+      
+      //Génération date de la demande
+      const currentDate = new Date().toISOString(); // Génère une date ISO standard
+
+      //Envoi email.js
       sendEmail();
+
+      // Envoyer les données au Webhook Make
+      const webhookUrl = 'https://hook.eu2.make.com/seflhki3jm64sx7tfqbfub4r86nbxn9t'; // URL du Webhook Make
+
+      const formData = {
+        nom: userData.nom,
+        prenom: userData.prenom,
+        email: userData.email,
+        telephone: userData.telephone,
+        adresse: userData.adresse,
+        ville: userData.ville,
+        message: answers.message || "N/A",
+        questions: {}, // Initialiser un objet pour les questions
+        dateSoumission: currentDate,
+        statut: "NEW" // Ajoute la date de soumission
+    };
+
+    // Ajouter les réponses aux questions dans formData en utilisant l'ID des questions
+    questions.forEach((question) => {
+      const answer = answers[question.id] || 'N/A';
+      formData.questions[`question_${question.id}`] = answer;
+    });
+
+      fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      })
+      .then(response => {
+        if (response.ok) {
+          console.log("Données envoyées au Webhook Make");
+        } else {
+          console.error("Erreur lors de l'envoi des données au Webhook", response.statusText);
+        }
+      })
+      .catch(error => console.error("Erreur:", error));
+
       setIsSubmitted(true);
     } else {
       console.log('Validation a échoué. Le formulaire n\'a pas été soumis.');
@@ -328,7 +372,7 @@ function DevisForm({ questions }) {
         </div>
       ) : (
         <div>
-          <h3 className='devis__form-title'>Formulaire de demande de devis en Ligne</h3>
+          <h3 className='devis__form-title'>Demande de Devis & Intervention en Ligne</h3>
           <form id='devis__form-anchor' className='form' onSubmit={handleSubmit}>
             {currentStepComponent}
             <div className="buttons">

@@ -43,7 +43,7 @@
 
     .savoirFaire-div{
         padding-left: 0;
-        width: 40%;
+        width: 60%;
 
         @include mobile{
             width: 100%;
@@ -91,6 +91,7 @@
     button{
         background: linear-gradient(to bottom right, lighten($green, 5), lighten($darkgreen, 5));
         color: $darkgreen;
+        margin-top: 30px;
     }
 }
 

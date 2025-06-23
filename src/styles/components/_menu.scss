@@ -118,3 +118,33 @@
         }
     }
 }
+
+/*Style du menu*/
+
+.menu__item--has-submenu {
+  position: relative;
+}
+
+.submenu {
+  position: absolute;
+  background: $darkgreen;
+  border: 1px solid #ccc;
+  list-style: none;
+  padding: 0;
+  margin-top: 100px;
+  z-index: 999;
+
+
+.submenu-link {
+  display: block;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  color: white;
+}
+  text-decoration: none;
+}
+
+.submenu-link:hover {
+  background-color: #f0f0f0;
+  color: $darkgreen;
+}

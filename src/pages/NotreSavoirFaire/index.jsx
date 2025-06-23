@@ -45,7 +45,7 @@ function NotreSavoirFaire () {
                 <img className="service-img" src={Imgplomberie} alt="Création de salle de bains style industriel, nature à Thonon" />
             
                 <div className='savoirFaire-div'>
-                    <h2 className='section-text'>Services de Plomberie: Installation et Dépannage à Thonon les Bains</h2>
+                    <h2 className='section-text'>Plomberie: Installation et Dépannage à Thonon les Bains, Allinges et Chablais</h2>
                     <p>Notre expertise en plomberie est la garantie d'une solution efficace à tous vos besoins. Nous sommes prêts à résoudre tous vos problèmes de plomberie, de la fuite au projet de création ou rénovation de salle de bains.</p>
                     <ul>
                         <li><FontAwesomeIcon className='check' icon={faCheck} /> <p>Dépannage plomberie</p></li>
@@ -59,6 +59,7 @@ function NotreSavoirFaire () {
                         <li><FontAwesomeIcon className='check' icon={faCheck} /> <p>Installation réseau plomberie neuf et rénovation</p></li>
                         <li><FontAwesomeIcon className='check' icon={faCheck} /> <p>Remplacement wc</p></li>
                     </ul>
+                    <Link to="/plomberie"><Button text={"+ d'info"}/></Link>
                 </div>
             </section>
 
