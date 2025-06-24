@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Banner from '../../components/Banner';
 import Faq from '../../components/Faq';
 import ImgPlomberie from '../../assets/imgPlomberie.jpg';
@@ -7,12 +7,15 @@ import ImgSalleDeBain from '../../assets/imgSdb.jpg';
 import ImgTravaux from '../../assets/imgSdb.jpg';
 import { faCircleQuestion } from "@fortawesome/free-solid-svg-icons";
 import Testimonies from '../../components/Testimonies';
+import CtaSection from '../../components/CtaSection';
+//import ModalIntervention from '../../components/ModalIntervention';
+
 
 const buttons = [
   { text: 'Demande d’intervention', link: '/intervention-plomberie' },
 ];
 
-const faqTitlePac = 'FAQ';
+const faqTitlePac = 'F.A.Q.';
 
   const faqDataPac = [
 {
@@ -80,7 +83,27 @@ const faqTitlePac = 'FAQ';
   },
   ];
 
+// ✅ Questions spécifiques à la plomberie
+const questionsPlomberie = [
+  {
+    id: '1',
+    question: "Quel type d’intervention plomberie souhaitez-vous ?",
+    options: ['Installation', 'Dépannage', 'Recherche de fuite', 'Autre'],
+  },
+  {
+    id: '2',
+    question: "Quel est le niveau d’urgence ?",
+    options: ['Intervention rapide', 'Sous 48h', 'Non urgent'],
+  },
+  {
+    id: '3',
+    question: "Dans quelle commune êtes-vous situé(e) ?",
+    options: ['Thonon', 'Allinges', 'Publier', 'Autre'],
+  },
+];
+
 function Plomberie() {
+
   const pageTitle = "Plombier Thonon & Chablais - Dépannage, Installation, Rénovation";
 
   const openTallyForm = () => {
@@ -94,6 +117,10 @@ function Plomberie() {
     }
   };
 
+//Modal
+  const [modalOpen, setModalOpen] = useState(false);
+
+
   return (
     <div className='main'>
       <Banner 
@@ -101,7 +128,7 @@ function Plomberie() {
         buttons={buttons} 
       />
 
-      <section className='savoirFaire-section'>
+      <section className='savoirFaire-section image-left'>
         <img className='pac-img' src={ImgPlomberie} alt='Dépannage plomberie Thonon et Chablais' />
         <div className='savoirFaire-div'>
           <h2 className='section-text'>Artisan plombier à Thonon, Allinges et dans le Chablais</h2>
@@ -111,7 +138,7 @@ function Plomberie() {
         </div>
       </section>
 
-      <section className='savoirFaire-section'>
+      <section className='savoirFaire-section image-right'>
         <img className='pac-img' src={ImgTravaux} alt='Travaux de plomberie en rénovation à Thonon' />
         <div className='savoirFaire-div'>
           <h2 className='section-text'>Nos services en plomberie</h2>
@@ -129,7 +156,7 @@ function Plomberie() {
         </div>
       </section>
 
-      <section className='savoirFaire-section'>
+      <section className='savoirFaire-section image-left'>
         <a href='https://www.qualit-enr.org/entreprises/demetrio/' className='pac-lien'><img className='pac-img-test' src={ImgRge} alt='Plombier certifié RGE à Thonon - Demetrio' /></a>
         <div className='savoirFaire-div'>
           <h2 className='section-text'>Garantie, certifications et assurance</h2>
@@ -138,7 +165,7 @@ function Plomberie() {
         </div>
       </section>
 
-      <section className='savoirFaire-section'>
+      <section className='savoirFaire-section image-right'>
         <div className='savoirFaire-div'>
           <h2 className='section-text'>Pourquoi faire appel à Demetrio ?</h2>
           <p className='pac__div-text'>
@@ -153,13 +180,14 @@ function Plomberie() {
         <img className='pac-img' src={ImgSalleDeBain} alt='Rénovation de salle de bain à Allinges et Thonon' />
       </section>
 
-      <section className="cta-section">
-        <div className="cta-container">
-          <h2 className="cta-title">Besoin d’un dépannage ou d’une installation ?</h2>
-          <p className="cta-text">Demandez une intervention rapide et professionnelle à Thonon, Allinges et dans tout le Chablais.</p>
-          <button className="cta-button" href="/intervention-plomberie">Demander une intervention</button>
-        </div>
-      </section>
+      <CtaSection
+        title="Besoin d’un dépannage ou d’une installation ?"
+        text="Demandez une intervention rapide et professionnelle à Thonon, Allinges et dans tout le Chablais."
+        buttonLabel="Demander une intervention"
+        onClick={() => setModalOpen(true)}
+        questions={questionsPlomberie}
+      />
+
 
       <Testimonies/>
 
@@ -167,6 +195,7 @@ function Plomberie() {
        faqData={faqDataPac}
        faqTitle={faqTitlePac}
       />
+
     </div>
   );
 }

@@ -55,6 +55,7 @@
         p {
             color: white;
             opacity: 1;
+            text-align: center;
             @include mobile {
                 margin: 0;
             }

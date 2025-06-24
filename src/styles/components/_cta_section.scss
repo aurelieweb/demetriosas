@@ -1,0 +1,31 @@
+.cta-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 80%;
+}
+
+.cta-section{
+    display: flex;
+    background: $darkgreen;
+    color: white;
+    margin: 50px;
+    padding: 50px 0;
+
+    p{
+        text-align: left;
+        margin-bottom: 50px;
+    }
+
+    button{
+        background: linear-gradient(to bottom right, lighten($green, 5), lighten($darkgreen, 5));
+        color: $darkgreen;
+        margin-top: 30px;
+    }
+}
+
+.cta-title{
+    color: white;
+    margin: 0;
+}

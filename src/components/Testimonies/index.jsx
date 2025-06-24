@@ -54,7 +54,10 @@ function Testimonies() {
   const MAX_LENGTH = 100; // Longueur maximale pour le texte réduit
 
   return (
+    <section className='Testimonies'>
+      <h2>Avis clients : <br/>Plomberie, chauffage et pompe à chaleur à Thonon et dans le Chablais</h2>
     <div className='advice-container'>
+      
       {adviceData.map((testimonial, index) => {
         const isExpanded = expanded[index]; // Vérifie si le texte est actuellement étendu
         const shouldShowExpandButton = testimonial.advice.length > MAX_LENGTH;
@@ -82,6 +85,7 @@ function Testimonies() {
         );
       })}
     </div>
+    </section>
   );
 }
 

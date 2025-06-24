@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Banner from '../../components/Banner';
 import Faq from '../../components/Faq';
 import ImgPac from '../../assets/imgPac3.jpeg';
@@ -6,12 +6,17 @@ import ImgQualipac from '../../assets/imgRGE.jpeg';
 import ImgAide from '../../assets/imgPac.png';
 import ImgChauffage from '../../assets/imgConfortChauffage.jpg';
 import { faCircleQuestion } from "@fortawesome/free-solid-svg-icons";
+import Testimonies from '../../components/Testimonies';
+import CtaSection from '../../components/CtaSection';
+import ModalIntervention from '../../components/ModalIntervention';
 
 const buttons = [
   { text: 'Demande de devis', link: '/devis-en-ligne' },
 ];
 
-const faqTitlePac = 'test';
+
+
+const faqTitlePac = 'F.A.Q.';
 
   const faqDataPac = [
       {
@@ -94,6 +99,26 @@ function PompeAChaleur() {
       console.error('Tally is not loaded yet');
     }
   };
+
+    const questions = [
+    {
+      id: '1',
+      question: "De quel type de demande s'agit-il ?",
+      options: ["Demande d'intervention", 'Demande de devis'],
+    },
+    {
+      id: '2',
+      question: "S'agit-il d'une demande de dépannage ?",
+      options: ['Oui', 'Non'],
+    },
+    {
+      id: '3',
+      question: 'Quel domaine concerne votre demande ?',
+      options: ['Plomberie', 'Chauffage', 'Pompe à chaleur'],
+    },
+  ];
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <div className='main'>
@@ -227,6 +252,16 @@ function PompeAChaleur() {
         </div>
       </section>
 
+      <ModalIntervention isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} questions={questions} />
+
+    <CtaSection
+        title="Installation de pompe à chaleur à Thonon et dans le Chablais"
+        text="Besoin d’une solution performante et économique pour chauffer votre logement ? Faites une demande de devis ou réalisez une étude personnalisée pour l’installation de votre pompe à chaleur à Thonon, Allinges ou dans le Chablais. Notre équipe vous accompagne pas à pas."
+        buttonLabel="Demander un devis"
+        onClick={() => setIsModalOpen(true)}
+        questions={questions}
+      />
+          <Testimonies/>
       < Faq
        faqData={faqDataPac}
        faqTitle={faqTitlePac}
