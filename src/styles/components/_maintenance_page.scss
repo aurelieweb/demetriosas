@@ -15,7 +15,7 @@
         font-weight: bold;
         margin-top: 50px;
         opacity: 0;
-        animation: fadeIn 6s ease-in-out infinite; 
+        animation: fadeIn 1.8s ease-out forwards;
 
         @include tablet{
             font-size: 24px;
@@ -28,12 +28,16 @@
     .maintenance__div-title{
         opacity: 0; 
         animation: fadeIn 3s ease-in-out forwards; // Animation de fondu en 2 secondes, répétée à l'infini
+        text-align: center;
+
     }
 
     .maintenance__div-subtitle{
         font-size: 18px;
         opacity: 0; // Commencez avec une opacité de 0
         animation-delay: 0.4s;
+        text-align: center;
+
 
         @include tablet{
             font-size: 14px;
@@ -49,7 +53,7 @@
     }
 }
 
-@keyframes fadeIn {
+/*@keyframes fadeIn {
     0% {
       opacity: 0; // Commencez avec une opacité de 0
     }
@@ -59,4 +63,15 @@
     100% {
       opacity: 1; // Revenir à une opacité de 0 à la fin de l'animation
     }
+  }*/
+
+  @keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px); // effet subtil vers le haut
   }
+  100% {
+    opacity: 0.7;
+    transform: translateY(0);
+  }
+}

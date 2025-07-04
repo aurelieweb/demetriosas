@@ -9,6 +9,7 @@ import { faCircleQuestion } from "@fortawesome/free-solid-svg-icons";
 import Testimonies from '../../components/Testimonies';
 import CtaSection from '../../components/CtaSection';
 //import ModalIntervention from '../../components/ModalIntervention';
+import Maintenance from '../../components/MaintenancePage';
 
 
 const buttons = [
@@ -127,18 +128,19 @@ function Plomberie() {
         pageTitle={pageTitle}
         buttons={buttons} 
       />
+      <Maintenance/>
 
       <section className='savoirFaire-section image-left'>
         <img className='pac-img' src={ImgPlomberie} alt='Dépannage plomberie Thonon et Chablais' />
         <div className='savoirFaire-div'>
           <h2 className='section-text'>Artisan plombier à Thonon, Allinges et dans le Chablais</h2>
           <p className='pac__div-text'>Chez <strong>Demetrio</strong>, nous mettons notre savoir-faire de plus de 20 ans au service de vos installations, rénovations et dépannages en plomberie. Nos valeurs ? <strong>Rigueur, honnêteté et qualité</strong>.</p>
-          <p className='pac__div-text'>Dans un secteur où les <strong>arnaques sont fréquentes</strong>, nous vous garantissons un service fiable, des devis clairs, et un accompagnement professionnel à chaque étape de votre projet.</p>
+          <p className='pac__div-text'>Dans un secteur où la <strong>transparence est essentielle</strong>, nous vous garantissons un service fiable, des devis clairs, et un accompagnement professionnel à chaque étape de votre projet.</p>
           <p className='pac__div-text'>Nous intervenons dans les meilleurs délais pour toute demande à <strong>Thonon, Allinges, Annemasse</strong> et dans tout le <strong>Chablais</strong>, sur rendez-vous.</p>
         </div>
       </section>
 
-      <section className='savoirFaire-section image-right'>
+      {/*<section className='savoirFaire-section image-right'>
         <img className='pac-img' src={ImgTravaux} alt='Travaux de plomberie en rénovation à Thonon' />
         <div className='savoirFaire-div'>
           <h2 className='section-text'>Nos services en plomberie</h2>
@@ -178,7 +180,7 @@ function Plomberie() {
           </p>
         </div>
         <img className='pac-img' src={ImgSalleDeBain} alt='Rénovation de salle de bain à Allinges et Thonon' />
-      </section>
+      </section>*/}
 
       <CtaSection
         title="Besoin d’un dépannage ou d’une installation ?"
