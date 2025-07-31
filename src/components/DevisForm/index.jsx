@@ -222,14 +222,14 @@ function DevisForm({ questions }) {
     if (validateInput()) {
       console.log('Formulaire soumis avec succès');
       
-      //Génération date de la demande
+ //Génération date de la demande
       const currentDate = new Date().toISOString(); // Génère une date ISO standard
+      const webhookUrl = 'https://hook.eu2.make.com/seflhki3jm64sx7tfqbfub4r86nbxn9t'; // URL du Webhook Make
 
       //Envoi email.js
       sendEmail();
 
-      // Envoyer les données au Webhook Make
-      const webhookUrl = 'https://hook.eu2.make.com/seflhki3jm64sx7tfqbfub4r86nbxn9t'; // URL du Webhook Make
+// Envoyer les données au Webhook Make
 
       const formData = {
         nom: userData.nom,
@@ -239,16 +239,17 @@ function DevisForm({ questions }) {
         adresse: userData.adresse,
         ville: userData.ville,
         message: answers.message || "N/A",
-        questions: {}, // Initialiser un objet pour les questions
         dateSoumission: currentDate,
         statut: "NEW" // Ajoute la date de soumission
     };
 
-    // Ajouter les réponses aux questions dans formData en utilisant l'ID des questions
-    questions.forEach((question) => {
-      const answer = answers[question.id] || 'N/A';
-      formData.questions[`question_${question.id}`] = answer;
-    });
+// Ajouter les réponses aux questions dans formData en utilisant l'ID des questions
+questions.forEach((question) => {
+  const answer = answers[question.id] || 'N/A';
+  formData[`question_${question.id}`] = answer;
+});
+
+    console.log("Données envoyées :", JSON.stringify(formData, null, 2));
 
       fetch(webhookUrl, {
         method: 'POST',
@@ -272,7 +273,7 @@ function DevisForm({ questions }) {
     }
   };
 
-  //Fonction envoi email
+//Fonction envoi email
   const sendEmail = () => {
     // Envoyer les réponses par email
     const emailParams = {
@@ -286,14 +287,14 @@ function DevisForm({ questions }) {
       emailParams[`question_${question.id}`] = answer;
     });
     
-    // Ajouter les réponses aux questions à emailParams en utilisant les ID des questions
+// Ajouter les réponses aux questions à emailParams en utilisant les ID des questions
     questions.forEach((question) => {
       const answer = answers[question.id] || 'N/A';
       console.log(`Question ${question.id}: ${answer}`);
       emailParams[`question_${question.id}`] = answer;
     });
 
-    // Vérification des datas
+// Vérification des datas
     console.log('EmailParams:', emailParams);
     
     // Envoi de la demande par mail
