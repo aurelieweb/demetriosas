@@ -104,3 +104,12 @@
       margin: 10px;
     }
   }
+
+#faq {
+  .section-heading__label{
+
+    @include mobile{
+    padding: 0 20px;
+    }
+  }
+}

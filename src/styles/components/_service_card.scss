@@ -42,9 +42,12 @@
   }
 
   &__grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+
+    @include mobile{
+        flex-direction: column;
+    }
   }
 }
 
@@ -57,6 +60,11 @@
   position: relative;
   padding: 0 28px;
   min-width: 0;
+
+  @include mobile{
+    padding: 0;
+    margin: 10px 0;
+  }
 
   /* Premier élément sans marge à gauche */
   &:first-child {
@@ -78,6 +86,10 @@
 
     width: 1px;
     background: #d7e1e4;
+
+    @include mobile{
+        display: none;
+    }
   }
 
   &__icon {
