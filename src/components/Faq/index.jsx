@@ -1,33 +1,62 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import {
+  faChevronUp,
+  faChevronDown
+} from '@fortawesome/free-solid-svg-icons';
 
-const Faq = ({ faqData, faqTitle }) => {
+const Faq = ({ faqData, faqTitle, faqLabel }) => {
   const [openIndices, setOpenIndices] = useState([]);
 
   const handleCardClick = (index) => {
     const currentIndex = openIndices.indexOf(index);
+
     if (currentIndex === -1) {
-      // If the index is not in the openIndices array, add it
       setOpenIndices([...openIndices, index]);
     } else {
-      // If the index is already in the openIndices array, remove it
-      setOpenIndices(openIndices.filter((i) => i !== index));
+      setOpenIndices(
+        openIndices.filter((i) => i !== index)
+      );
     }
   };
 
   return (
-    <section id='faq'>
-      <h2>{faqTitle}</h2>
-      <div className='faq__container'>
+    <section id="faq">
+
+      <div className="section-heading">
+        <span className="section-heading__label">
+          {faqLabel}
+        </span>
+
+        <h2>{faqTitle}</h2>
+      </div>
+
+      <div className="faq__container">
         {faqData.map((card, index) => (
-          <div key={index} className='faq__card' onClick={() => handleCardClick(index)}>
+          <div
+            key={index}
+            className="faq__card"
+            onClick={() => handleCardClick(index)}
+          >
             <div className="faq__card-title">
+
               <div className="card__title-div">
-                <FontAwesomeIcon className="faq__card-icon" icon={card.icon} />
+                <FontAwesomeIcon
+                  className="faq__card-icon"
+                  icon={card.icon}
+                />
+
                 <h3>{card.title}</h3>
               </div>
-              <FontAwesomeIcon icon={openIndices.includes(index) ? faChevronUp : faChevronDown} />
+
+              <FontAwesomeIcon
+                icon={
+                  openIndices.includes(index)
+                    ? faChevronUp
+                    : faChevronDown
+                }
+              />
+
             </div>
 
             {openIndices.includes(index) && (
@@ -37,11 +66,13 @@ const Faq = ({ faqData, faqTitle }) => {
                 ))}
               </div>
             )}
+
           </div>
         ))}
       </div>
+
     </section>
   );
-}
+};
 
 export default Faq;

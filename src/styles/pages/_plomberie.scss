@@ -1,3 +1,46 @@
 .image-right{
     flex-direction: row-reverse;
 }
+
+//STYLES ICONES NOTRE EXPERTISE
+
+.expertise-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 1.5rem;
+    width: 100%;
+}
+
+.expertise-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+
+  &__icon {
+    font-size: 2rem;
+    color: $green;
+    margin-bottom: 0.6rem;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: $darkgreen;
+  }
+
+  p {
+    margin: 0.15rem 0 0;
+    font-size: 0.78rem;
+    line-height: 1.35;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .expertise-features {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}

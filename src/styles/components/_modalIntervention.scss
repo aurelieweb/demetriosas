@@ -14,20 +14,26 @@
 
 /* Contenu du modal */
 .modal-content {
-    display: flex;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   background: white;
-  padding: 2rem;
+  //padding: 2rem;
   border-radius: 10px;
   width: 90%;
-  max-width: 80%;
+  max-width: 800px;
   min-height: 50vh;
-  //max-height: 90vh;
+  max-height: 90vh;
   overflow-y: auto;
   position: relative;
   animation: fadeIn 0.3s ease-in-out;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+
+  h3{
+    display: none;
+  }
 }
 
 /* Bouton de fermeture */
@@ -38,6 +44,34 @@
     width: 40px;
     height: 40px;
     transition: transform 0.2s;
+}
+
+.modal-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  
+  p{
+    margin: 0 0 50px 0;
+  font-size: 20px;
+  text-align: left;
+  margin: 20px;
+  font-size: 20px;
+  font-weight: bold;
+    
+  }
+
+}
+
+.modal-logo{
+  width: 200px;
+  margin: 50px 0;
+
+  @include mobile{
+    margin: 0;
+  }
+
 }
 
 .modal-close:hover {

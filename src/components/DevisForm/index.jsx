@@ -253,6 +253,7 @@ questions.forEach((question) => {
 
       fetch(webhookUrl, {
         method: 'POST',
+        mode: 'cors', // Ajoute ça
         headers: {
           'Content-Type': 'application/json',
         },
@@ -263,10 +264,13 @@ questions.forEach((question) => {
           console.log("Données envoyées au Webhook Make");
         } else {
           console.error("Erreur lors de l'envoi des données au Webhook", response.statusText);
+          alert("Erreur lors de l'envoi. Essayez depuis un autre appareil.");
         }
       })
-      .catch(error => console.error("Erreur:", error));
-
+      .catch(error => {
+        console.error("Erreur FETCH:", error);
+        alert("Erreur lors de l'envoi du formulaire. Essayez depuis un autre appareil.");
+      });
       setIsSubmitted(true);
     } else {
       console.log('Validation a échoué. Le formulaire n\'a pas été soumis.');
@@ -282,11 +286,6 @@ questions.forEach((question) => {
       message: answers.message || 'N/A',
     };
 
-    questions.forEach((question) => {
-      const answer = answers[question.id] || 'N/A';
-      emailParams[`question_${question.id}`] = answer;
-    });
-    
 // Ajouter les réponses aux questions à emailParams en utilisant les ID des questions
     questions.forEach((question) => {
       const answer = answers[question.id] || 'N/A';
@@ -301,6 +300,13 @@ questions.forEach((question) => {
     const emailUserId = process.env.REACT_APP_EMAILJS_USERID;
     const emailService = process.env.REACT_APP_EMAILJS_SERVICE;
     const emailTemplate = process.env.REACT_APP_EMAILJS_TEMPLATE;
+
+      // Vérifie que les variables d’environnement sont bien définies
+  if (!emailUserId || !emailService || !emailTemplate) {
+    console.error('Variables d’environnement email.js manquantes');
+    alert("Erreur technique. Réessayez plus tard.");
+    return;
+  }
     
     emailjs.send(emailService, emailTemplate, emailParams, emailUserId)
       .then((response) => {

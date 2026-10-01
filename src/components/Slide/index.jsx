@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../../styles/styles.scss';
 import ImgSlide from '../../assets/imgTeam.jpg';
 
-//Fonction slide
+// Fonction slide
 function Slide() {
   const [selectedTab, setSelectedTab] = useState('histoire');
 
@@ -12,10 +12,14 @@ function Slide() {
 
   return (
     <div className="slide">
-      <img className="slide__image" src={ImgSlide} alt="Plombier Thonon, Allinges et Chablais" />
+      <img
+        className="slide__image"
+        src={ImgSlide}
+        alt="Entreprise DEMETRIO, plombier chauffagiste à Allinges et Thonon-les-Bains"
+      />
 
       <div className="slide__content">
-        <div className='slide__content-tab'>
+        <div className="slide__content-tab">
           <ul>
             <li
               onClick={() => handleTabClick('histoire')}
@@ -23,6 +27,7 @@ function Slide() {
             >
               Notre histoire
             </li>
+
             <li
               onClick={() => handleTabClick('valeurs')}
               className={selectedTab === 'valeurs' ? 'active' : ''}
@@ -32,20 +37,66 @@ function Slide() {
           </ul>
         </div>
 
-        <div className={`slide__content-text ${selectedTab === 'histoire' ? 'text-a' : 'text-b'}`}>
-          {/* affichage conditionnel */}
+        <div
+          className={`slide__content-text ${
+            selectedTab === 'histoire' ? 'text-a' : 'text-b'
+          }`}
+        >
           {selectedTab === 'histoire' ? (
             <>
-              <p>DEMETRIO, une entreprise familiale spécialisée dans le dépannage, l’installation de système de chauffage, de plomberie et de pompes à chaleur, ancrée dans la préservation de la planète et du savoir-faire local.</p>
-              <p>Basée à Allinges, nous intervenons dans la région de Thonon-les-Bains et du Chablais avec réactivité et expertise, tout en incarnant nos valeurs d’intégrité et de qualité.</p>
-              <p>Depuis plus de 20 ans, nous mettons notre passion pour la plomberie et le chauffage au service de notre engagement pour l’environnement et nos clients.</p>
+              <p>
+                <strong>
+                  DEMETRIO est une entreprise familiale implantée à Allinges
+                  depuis 2011
+                </strong>
+                , au cœur du Chablais. Stéphane exerce le métier de
+                plombier-chauffagiste depuis plus de 20 ans et met son
+                expérience au service des particuliers pour leurs projets de
+                plomberie, chauffage, pompe à chaleur et climatisation.
+              </p>
+
+              <p>
+                De l’installation traditionnelle aux solutions de chauffage
+                plus performantes, notre métier a évolué au fil des années,
+                mais notre façon de travailler est restée la même :{' '}
+                <strong>
+                  étudier chaque installation, choisir une solution adaptée et
+                  soigner sa réalisation.
+                </strong>
+              </p>
+
+              <p>
+                Basés à Allinges, nous intervenons à Thonon-les-Bains et dans
+                le Chablais, avec la volonté de rester une{' '}
+                <strong>
+                  entreprise locale, disponible et proche de ses clients.
+                </strong>
+              </p>
             </>
           ) : (
             <>
-              <p>Engagé pour un avenir durable, nous privilégions des fournisseurs français et européens, marquant ainsi notre engagement envers l’environnement et l’économie locale. Chaque installation que nous réalisons est pensée pour allier efficacité énergétique et réduction des émissions de carbone, contribuant ainsi à un avenir plus durable</p>
-              <p>Notre équipe expérimentée combine compétences techniques et conscience environnementale pour concevoir des solutions durables et performantes. Nous assurons un service après-vente fiable, garantissant votre tranquillité d’esprit à chaque étape.</p>
-              <p>Explorez nos solutions complètes en plomberie, chauffage et pompe à chaleur. Ensemble, créons un avenir plus éthique et plus confortable.</p>
+              <p>
+                <strong>
+                  Pour nous, être artisan, ce n’est pas simplement installer
+                  un équipement. C’est faire en sorte qu’il fonctionne bien et
+                  qu’il tienne dans le temps.
+                </strong>
+              </p>
 
+              <p>
+                Cela signifie prendre le temps de réfléchir à une installation,
+                choisir le matériel adapté et soigner ce qui se voit… mais
+                aussi tout ce qui ne se verra plus une fois le chantier
+                terminé.
+              </p>
+
+              <p>
+                <strong>Conseil, expertise et proximité</strong> guident notre
+                travail au quotidien. Nous privilégions des solutions fiables,
+                performantes et adaptées aux besoins réels de chaque client,
+                avec la même exigence de l’étude du projet jusqu’à sa
+                réalisation.
+              </p>
             </>
           )}
         </div>
@@ -55,4 +106,3 @@ function Slide() {
 }
 
 export default Slide;
-
