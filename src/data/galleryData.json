@@ -1,58 +1,50 @@
 [
     {
-        "id": 1,
-        "cover": "anthy1.jpeg",
-        "img": ["anthy1.jpeg",
-                "anthy2.jpg",
-                "publier1.jpeg"
-        ],
-        "description": "Rénovation d'une salle de bains",
-        "lieu": "Anthy"
+    "id": 1,
+    "category": "Pompe à chaleur",
+    "title": "Installation d'une pompe à chaleur Atlantic dans une villa neuve",
+    "cover": "imgChauffeEauMileo.jpeg",
+    "img": [
+        "imgChauffeEauMileo.jpeg"
+    ],
+    "description": "Création complète du système de chauffage d'une villa neuve à Anthy-sur-Léman avec installation d'une pompe à chaleur Atlantic, d'un chauffe-eau de 100 litres et d'un plancher chauffant.",
+    "lieu": "Anthy-sur-Léman"
     },
     {
-        "id": 2,
-        "cover": "publier1.jpeg",
-        "img": ["anthy1.jpeg",
-        "anthy2.jpg"
-        ],
-        "description": "Installation d'une pompe à chaleur",
-        "lieu": "Publier"
+    "id": 2,
+    "category": "Chauffage",
+    "title": "Remplacement d'une chaudière fioul et rénovation du système de chauffage",
+    "cover": "imgChaudiere.jpeg",
+    "img": [
+        "imgChaudiere.jpeg"
+    ],
+    "description": "Remplacement d'une ancienne chaudière par une chaudière fioul Atlantic Effinox et rénovation du système de chauffage existant pour améliorer le confort et les performances de l'installation.",
+    "lieu": "Thonon-les-bains"
     },
     {
-        "id": 3,
-        "cover": "anthy1.jpeg",
-        "img": ["anthy1.jpg",
-        "anthy2.jpeg"
-        ],
-        "description": "Description de l'image 3",
-        "lieu": "Lieu de la photo 3"
+    "id": 3,
+    "category": "Pompe à chaleur",
+    "title": "Installation d'une pompe à chaleur dans un chalet haut de gamme à Châtel",
+    "cover": "imgPACChatel.jpeg",
+    "img": [
+        "imgPACChatel.jpeg"
+    ],
+    "description": "Rénovation d'un chalet haut de gamme à Châtel avec installation d'une pompe à chaleur et mise en place d'un plancher chauffant pour assurer le confort thermique du logement.",
+    "lieu": "Châtel"
     },
     {
-      "id": 4,
-      "cover": "anthy1.jpeg",
-      "img": ["anthy1.jpg",
-      "anthy2.jpeg"
-      ],
-      "description": "Description de l'image 2",
-      "lieu": "Lieu de la photo 2"   
-      },
-      {
-        "id": 5,
-        "cover": "anthy1.jpeg",
-        "img": ["anthy1.jpg",
-        "anthy2.jpeg"
-        ],
-        "description": "Description de l'image 2",
-        "lieu": "Lieu de la photo 2"
-      },
-      {
-        "id": 6,
-        "cover": "anthy1.jpeg",
-        "img": "chemin/vers/image3.jpg",
-        "description": ["anthy1.jpg",
-        "anthy2.jpeg"
-        ],
-        "lieu": "Lieu de la photo 3"
-      }
-  ]
-  
+    "id": 4,
+    "category": "Plomberie",
+    "title": "Création de salles de bains compactes à Port Ripaille",
+    "cover": "imgSdbRipaille3.jpeg",
+    "img": [
+        "imgSdbRipaille1.jpeg",
+        "imgSdbRipaille2.jpeg",
+        "imgSdbRipaille3.jpeg",
+        "imgSdbRipaille4.jpeg",
+        "imgSdbRipaille5.jpeg"
+    ],
+    "description": "Rénovation et création de deux salles de bains compactes dans une maison haut de gamme à Port Ripaille, avec adaptation des réseaux de plomberie, installation des équipements sanitaires et intégration d'un WC lavant japonais.",
+    "lieu": "Thonon-les-Bains"
+    }
+]

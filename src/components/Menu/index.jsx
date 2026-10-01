@@ -26,10 +26,6 @@ function Menu() {
           <Link to="/" className="menu__item-link" onClick={closeMenu}>Accueil</Link>
         </li>
 
-        <li className="menu__item">
-          <Link to="/pompes-a-chaleur" className="menu__item-link" onClick={closeMenu}>Pompe à chaleur</Link>
-        </li>
-
         <li className="menu__item menu__item--has-submenu">
           <span className="menu__item-link" onClick={toggleSubmenu}>
             Notre savoir-faire ▾
@@ -37,10 +33,16 @@ function Menu() {
           {submenuOpen && (
             <ul className="submenu">
               <li>
-                <Link to="/notre-savoir-faire" className="submenu-link" onClick={closeMenu}>Présentation</Link>
+                <Link to="/plomberie" className="submenu-link" onClick={closeMenu}>Plomberie</Link>
               </li>
               <li>
-                <Link to="/plomberie" className="submenu-link" onClick={closeMenu}>Plomberie</Link>
+                <Link to="/notre-savoir-faire" className="submenu-link" onClick={closeMenu}>Chauffage</Link>
+              </li>
+              <li>
+                <Link to="/pompes-a-chaleur" className="submenu-link" onClick={closeMenu}>Pompe à chaleur</Link>
+              </li>
+              <li>
+                <Link to="/climatisation" className="submenu-link" onClick={closeMenu}>Climatisation</Link>
               </li>
             </ul>
           )}

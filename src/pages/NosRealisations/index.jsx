@@ -1,33 +1,59 @@
 import React from 'react';
 import Banner from '../../components/Banner';
-/*import Gallery from '../../components/Gallery';*/
-import MaintenancePage from '../../components/MaintenancePage';
+import Gallery from '../../components/Gallery';
+import CtaSection from '../../components/CtaSection';
 
 const buttons = [
-    { text: 'Demande d\'intervention', link: '/devis-en-ligne' },
-  ];
+  { text: "Demander un devis", link: "/devis-en-ligne" },
+];
 
 function NosRealisations() {
 
-    const pageTitle = "Expert plomberie, Chauffage et Pompe à chaleur à Thonon";
+  const pageTitle =
+    "Nos réalisations à Thonon-les-Bains et dans le Chablais";
 
-    return (
-        <div className='main'>
-            <Banner 
-                pageTitle={pageTitle}
-                buttons={buttons} 
-            />
-            <section className='gallery__section'>
-                <h2>Découvrez Nos Réalisations en Plomberie, Chauffage et Pompes à Chaleur</h2>
-                {/*<p className='section-text'>
-                De la rénovation éco-responsable à l'installation de systèmes de chauffage modernes, nos projets illustrent notre passion pour la durabilité, le confort et la satisfaction de nos clients. Chaque réalisation témoigne de notre engagement envers l'innovation, la précision et l'efficacité énergétique. 
-                Explorez nos réalisations et laissez-vous inspirer pour votre prochain projet de salle de bains ou chauffage.   
-                </p>
-                <Gallery />*/}
-            </section>
-            <MaintenancePage />
+  return (
+    <div className="main">
+
+      <Banner
+        pageTitle={pageTitle}
+        buttons={buttons}
+      />
+
+      <section className="gallery__section">
+
+        <div className="section-heading">
+          <span className="section-heading__label">
+            Nos réalisations
+          </span>
+
+          <h2>
+            Plomberie, chauffage, pompe à chaleur et climatisation
+          </h2>
         </div>
-    );
+
+        <p className="section-text">
+          Découvrez quelques réalisations DEMETRIO en
+          <strong> plomberie, chauffage, pompe à chaleur et climatisation</strong>
+          {' '}à Thonon-les-Bains, Allinges et dans le Chablais.
+          Installation d’équipements, rénovation de salle de bains,
+          remplacement de système de chauffage ou pose d’une climatisation
+          réversible : chaque projet est étudié en fonction du logement,
+          des besoins de nos clients et des contraintes techniques.
+        </p>
+
+        <Gallery />
+
+      </section>
+
+      <CtaSection
+        title="Vous avez un projet dans le Chablais ?"
+        text="Plomberie, chauffage, pompe à chaleur ou climatisation : présentez-nous votre projet et échangeons sur la solution adaptée à votre logement."
+        buttonLabel="Décrire mon projet"
+      />
+
+    </div>
+  );
 }
 
 export default NosRealisations;
